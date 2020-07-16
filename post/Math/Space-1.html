@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,minimum-scale=1,maximum-scale=1">
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+  <meta name="description" content="空间探索[1]:高维探索"/>
+
+
+
+
+  <meta name="keywords" content="数学,空间," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="离梦之殇">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=1.1" />
+
+
+
+<link rel="canonical" href="https://blog.rainbowyang.moe/post/Math/Space-1.html"/>
+
+
+<meta name="description" content="引子 我们处在三维空间之中(别扯四维时空，你先要知道那到底是啥)，所以对于三维空间的理解和想象都显得十分的自然。 但是三维空间之上，比如四维空间，到底意味这什么？ 在这里，我并不是想涉及到其物理意义，而只是纯粹的数学上的欧几里得空间。  维 维度，意味着一个独一无二的方向。它只能由它自己来表达，其他的维度投影到这个方向上都应该成为一个点。 这就意味着所有的维度都是正交（垂直）的，然后一起张开了这">
+<meta property="og:type" content="article">
+<meta property="og:title" content="空间探索[1]:高维探索">
+<meta property="og:url" content="https://blog.rainbowyang.moe/post/Math/Space-1.html">
+<meta property="og:site_name" content="离梦之殇">
+<meta property="og:description" content="引子 我们处在三维空间之中(别扯四维时空，你先要知道那到底是啥)，所以对于三维空间的理解和想象都显得十分的自然。 但是三维空间之上，比如四维空间，到底意味这什么？ 在这里，我并不是想涉及到其物理意义，而只是纯粹的数学上的欧几里得空间。  维 维度，意味着一个独一无二的方向。它只能由它自己来表达，其他的维度投影到这个方向上都应该成为一个点。 这就意味着所有的维度都是正交（垂直）的，然后一起张开了这">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2017-09-30T12:51:00.000Z">
+<meta property="article:modified_time" content="2020-07-16T03:25:06.451Z">
+<meta property="article:author" content="Rainbow Yang">
+<meta property="article:tag" content="数学">
+<meta property="article:tag" content="空间">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=1.1" />
+<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'>
+
+
+
+
+
+<script type="text/javascript">
+  var themeConfig = {
+    fancybox: {
+      enable: false
+    },
+  };
+</script>
+
+
+
+
+  
+
+
+
+
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css">
+
+
+    <title> 空间探索[1]:高维探索 - 离梦之殇 </title>
+  <meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="离梦之殇" type="application/atom+xml">
+</head>
+
+  <body>
+    <div id="page">
+      <header id="masthead"><div class="site-header-inner">
+    <h1 class="site-title">
+        <a href="/." class="logo">离梦之殇</a>
+    </h1>
+
+    <nav id="nav-top">
+        
+            <ul id="menu-top" class="nav-top-items">
+                
+                    <li class="menu-item">
+                        <a href="/archives">
+                            
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li class="menu-item">
+                        <a href="/about">
+                            
+                            
+                                About
+                            
+                        </a>
+                    </li>
+                
+                    <li class="menu-item">
+                        <a href="/links">
+                            
+                            
+                                Links
+                            
+                        </a>
+                    </li>
+                
+                    <li class="menu-item">
+                        <a href="/atom.xml">
+                            
+                            
+                                RSS
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        
+  </nav>
+</div>
+
+      </header>
+      <div id="content">
+        
+    <div id="primary">
+        
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          空间探索[1]:高维探索
+        
+      </h1>
+
+      <time class="post-time">
+          Sep 30 2017
+      </time>
+    </header>
+
+    
+      <div class="post-content">
+        <h2 id="引子"><a class="markdownIt-Anchor" href="#引子"></a> 引子</h2>
+<p>我们处在三维空间之中(别扯四维时空，你先要知道那到底是啥)，所以对于三维空间的理解和想象都显得十分的自然。</p>
+<p>但是三维空间之上，比如四维空间，到底意味这什么？ 在这里，我并不是想涉及到其物理意义，而只是纯粹的数学上的欧几里得空间。</p>
+<h2 id="维"><a class="markdownIt-Anchor" href="#维"></a> 维</h2>
+<p>维度，意味着一个独一无二的方向。它只能由它自己来表达，其他的维度投影到这个方向上都应该成为一个点。</p>
+<p>这就意味着所有的维度都是正交（垂直）的，然后一起张开了这个几何空间。</p>
+<p>维度其实也可以看成一个轴，在下面我可能会混合使用。</p>
+<h3 id="表示方法"><a class="markdownIt-Anchor" href="#表示方法"></a> 表示方法</h3>
+<h4 id="引入"><a class="markdownIt-Anchor" href="#引入"></a> 引入</h4>
+<p>首先想象一个三维坐标系，然后把它投影在在一个平面上（其实就算在脑海里，它也已经是二维的，只是感觉是三维）。</p>
+<p>可以把他画在纸上，很显然在一张二维的纸上，要画三个维度（坐标轴）并且让他们互相垂直是不可能的。</p>
+<p>所以对于第三维度（z 轴），一般会在 x 轴向右，y 轴向上的情况下，把 z 轴向左下角画。虽然并没有垂直，但是可以自然的感到这是由于投影造成的。</p>
+<p>由于习惯了对三维的思考，所以这种画在二维的三维图像还是很容易还原回成三维的感觉。</p>
+<p>事实上，作为三维生物，我们的眼睛看到的其实是二维的东西（也就是那层视网膜所得到的）。</p>
+<p>包括平时生活中的各种显示器也就都是二维的，要想在上面显示出一个东西，那也就是二维的图像。</p>
+<h4 id="表示"><a class="markdownIt-Anchor" href="#表示"></a> 表示</h4>
+<p>那么归根结底，一个维度投影到我们所看到的二维上，就可以用一个视觉角度（<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>θ</mi><mi>s</mi></mrow><annotation encoding="application/x-tex">θs</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">θ</span><span class="mord mathdefault">s</span></span></span></span>）和一个视觉长度（<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>l</mi><mi>s</mi></mrow><annotation encoding="application/x-tex">ls</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">s</span></span></span></span>）来表示了。</p>
+<h5 id="视觉角度"><a class="markdownIt-Anchor" href="#视觉角度"></a> 视觉角度</h5>
+<p>这个视觉角度，其实也就是上下左右的方向，用一个角度就可以表示了。这个角度我更习惯于以 3 点钟方向为开始，然后逆时针递增（其实也就是平面直角坐标系里面类似的倾斜角的定义）。</p>
+<h5 id="视觉长度"><a class="markdownIt-Anchor" href="#视觉长度"></a> 视觉长度</h5>
+<p>至于视觉长度，其实并不是说其单位长度有多长，而是看上去的长度和原来的长度的比值。</p>
+<p>也就是说当观察者的视线和这个维度垂直的时候，看到的是最长的（我把这定为 1，或者理解为 100%）；然后想象一下把这个维度慢慢地朝着自己，最后当它完全指向你的时候，所能看到的就是一个点（这就是 0%）。</p>
+<p>那么定义视线和维度的夹角为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>θ</mi><mi>s</mi></mrow><annotation encoding="application/x-tex">θs</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">θ</span><span class="mord mathdefault">s</span></span></span></span>，那么上面说的这个值也就是 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>s</mi><mi>i</mi><mi>n</mi><mo stretchy="false">(</mo><mi>θ</mi><mi>s</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">sin(θs)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">s</span><span class="mord mathdefault">i</span><span class="mord mathdefault">n</span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.02778em;">θ</span><span class="mord mathdefault">s</span><span class="mclose">)</span></span></span></span>。</p>
+<p>所以一个轴就可以定义为（角度，视觉长度）</p>
+<p>我们所习惯的平面直角坐标系就可以用{ x 轴(0°，100%), y 轴(90°，100%) }来表示（但是我更习惯弧度，也就是{ x 轴(0，1), y 轴(π/2，1) }）。</p>
+<p>在这里也可以用一个复数来表示一个维度，其幅角和模刚好对应上面的角度和视觉长度，所以上面那个二维的坐标系也可以表示为也就是{ x 轴(1+0i), y 轴(0+1i) }。</p>
+<h2 id="坐标系"><a class="markdownIt-Anchor" href="#坐标系"></a> 坐标系</h2>
+<p>坐标系，由一些应该在其空间上相互垂直的维度组成。</p>
+<p>虽然可以在二维的屏幕上用上面的方式表示维度的投影之后的样子，但这并不意味这任意的组合都可以给人一种所有的轴之间互相垂直的感觉。</p>
+<h3 id="简单维度"><a class="markdownIt-Anchor" href="#简单维度"></a> 简单维度</h3>
+<h4 id="二维"><a class="markdownIt-Anchor" href="#二维"></a> 二维</h4>
+<p>在二维的时候，视觉长度无疑都应该是 100%。（不然就是像三维的了）</p>
+<p>但是对于其角度，就应该满足差为 90°。因为只有这样才有维度之间垂直的感觉。</p>
+<h4 id="三维"><a class="markdownIt-Anchor" href="#三维"></a> 三维</h4>
+<p>可以先想象一下二维坐标系，然后想象着第三维（z 轴）在这个时候正对着你（就像俯视还没发射的火箭？）。</p>
+<p>接着将 z 轴与视线偏离，这时 z 轴的视觉长度将会从 0 开始增加，同时 x 轴和 y 轴的视觉长度会被向 z 轴的压缩。</p>
+<h3 id="高维推广"><a class="markdownIt-Anchor" href="#高维推广"></a> 高维推广</h3>
+<p>既然在上面的三维里面，当增加一个维度的视觉长度的时候，会导致其他维度视觉长度的减少，那么会不会有一个特殊的等式呢？</p>
+<p>事实如此，在三维的情况下，假设有以原点为起点，分别以（R,0,0），（0,R,0），（0,0,R）为终点的三条线段同时平行投影到一个平面上，那么其长度的平方和为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>2</mn><msup><mi>R</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">2R^2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord">2</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span>。</p>
+<p>当然在二维的时候，这个结论也毫无疑问的成立。</p>
+<p>那么为什么不能推广到高维呢？</p>
+<h4 id="从二维到三维"><a class="markdownIt-Anchor" href="#从二维到三维"></a> 从二维到三维</h4>
+<p>假设在平面上有一个圆，无论怎么旋转，它仍然是一个圆。</p>
+<p>除非偏离垂直那个平面的视线，从侧面看它。这时候，这个圆就毫无疑问变成了看上去的椭圆，但是都可以看出这就是圆。这都是因为在三维的世界中生活，让这种变形非常容易理解。</p>
+<h4 id="从三维到四维"><a class="markdownIt-Anchor" href="#从三维到四维"></a> 从三维到四维</h4>
+<p>同样的，想象一个球，无论怎么旋转，它仍然是一个球。</p>
+<p>那么，然后视线偏离！</p>
+<p>你可以想象一个画在平面上的球，然后像二维到三维一样，从侧面去看，那么正如圆变成椭圆一样，这个在三维不管怎么看都一样的球变成了一个椭球。</p>
+
+      </div>
+    
+
+    
+      <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+          <a href="/tags/%E6%95%B0%E5%AD%A6/">数学</a>
+          
+          <a href="/tags/%E7%A9%BA%E9%97%B4/">空间</a>
+          
+        </div>
+      
+
+      
+      
+  <nav class="post-nav">
+    
+      <a class="prev" href="/post/Daily/Daily-Talk-1.html">
+        <i class="iconfont icon-left"></i>
+        <span class="prev-text nav-default">随谈</span>
+        <span class="prev-text nav-mobile">Prev</span>
+      </a>
+    
+    
+      <a class="next" href="/post/Math/Space-0.html">
+        <span class="next-text nav-default">空间探索[0]:前言</span>
+        <span class="prev-text nav-mobile">Next</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+      
+  <div class="comments" id="comments">
+    
+      <div style="text-align:center;">
+          <button class="btn" id="load-disqus" onclick="disqus.load();">加载 Disqus 评论</button>
+      </div>
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="//disqus.com/?ref_noscript" target="_blank" rel="noopener">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
+
+      </footer>
+    
+  </article>
+
+    </div>
+
+      </div>
+
+      <footer id="colophon"><span class="copyright-year">
+    
+        &copy;
+    
+        2017 -
+    
+    2020
+    <span class="footer-author">Rainbow Yang.</span>
+    <span class="power-by">
+        Powered by <a class="hexo-link" href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> and <a class="theme-link" href="https://github.com/frostfan/hexo-theme-polarbear" target="_blank" rel="noopener">Polar Bear</a>
+    </span>
+</span>
+
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+    
+
+<script type="text/javascript">
+  var disqus_shortname = 'rainbowyang';
+  var disqus_identifier = '6915';
+
+  var disqus_title = "空间探索[1]:高维探索";
+
+
+  var disqus = {
+    load : function disqus(){
+        if(typeof DISQUS !== 'object') {
+          (function () {
+          var s = document.createElement('script'); s.async = true;
+          s.type = 'text/javascript';
+          s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+          }());
+          $('#load-disqus').remove(); ///加载后移除按钮
+        }
+    }
+  }
+
+  
+    var disqus_config = function () {
+        this.page.url = disqus_url;
+        this.page.identifier = disqus_identifier;
+        this.page.title = disqus_title;
+    };
+  
+
+</script>
+
+
+    
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+  
+
+  
+
+    <script type="text/javascript" src="/js/src/theme.js?v=1.1"></script>
+<script type="text/javascript" src="/js/src/bootstrap.js?v=1.1"></script>
+
+  </body>
+</html>
