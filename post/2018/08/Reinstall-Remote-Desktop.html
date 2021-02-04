@@ -1,0 +1,201 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>实现远程桌面（系统重装第二弹） | 离梦之殇 如梦之境 | To See Outer. To See Inner.</title>
+
+  
+  <meta name="author" content="Rainbow Yang">
+  
+
+  
+  <meta name="description" content="前言
+第一次发博这么积极欸。 虽然说是重安，但由于之前安的时候也是不假思索的依葫芦画瓢。所以第二次安，也是不太顺利，有一些地方也完全忘了。那也就记录一下。">
+  
+
+  
+  
+  <meta name="keywords" content="技术">
+  
+
+  <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+  <meta property="og:title" content="实现远程桌面（系统重装第二弹）"/>
+
+  <meta property="og:site_name" content="离梦之殇 如梦之境"/>
+
+  
+  <meta property="og:image" content="/favicon.ico"/>
+  
+
+  <link href="/favicon.ico" rel="icon">
+  <link rel="alternate" href="/atom.xml" title="离梦之殇 如梦之境" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+
+<body>
+<div class="blog">
+  <div class="content">
+
+    <header>
+  <div class="site-branding">
+    <h1 class="site-title">
+      <a href="/">离梦之殇 如梦之境</a>
+    </h1>
+    <p class="site-description">To See Outer. To See Inner.</p>
+  </div>
+  <nav class="site-navigation">
+    <ul>
+      
+        <li><a href="/">Home</a></li>
+      
+        <li><a href="/archives">Archives</a></li>
+      
+        <li><a href="/about">About</a></li>
+      
+        <li><a href="/links">Links</a></li>
+      
+        <li><a href="/atom.xml">RSS</a></li>
+      
+    </ul>
+  </nav>
+</header>
+
+    <main class="site-main posts-loop">
+    <article>
+
+  
+    
+    <h3 class="article-title"><span>实现远程桌面（系统重装第二弹）</span></h3>
+    
+  
+
+  <div class="article-top-meta">
+    <span class="posted-on">
+      <a href="/post/2018/08/Reinstall-Remote-Desktop.html" rel="bookmark">
+        <time class="entry-date published" datetime="2018-08-09T08:18:22.000Z">
+          2018-08-09
+        </time>
+      </a>
+    </span>
+  </div>
+
+
+  
+
+  <div class="article-content">
+    <div class="entry">
+      
+        <h2 id="&#x524D;&#x8A00;">&#x524D;&#x8A00;</h2>
+<p>&#x7B2C;&#x4E00;&#x6B21;&#x53D1;&#x535A;&#x8FD9;&#x4E48;&#x79EF;&#x6781;&#x6B38;&#x3002; &#x867D;&#x7136;&#x8BF4;&#x662F;&#x91CD;&#x5B89;&#xFF0C;&#x4F46;&#x7531;&#x4E8E;&#x4E4B;&#x524D;&#x5B89;&#x7684;&#x65F6;&#x5019;&#x4E5F;&#x662F;&#x4E0D;&#x5047;&#x601D;&#x7D22;&#x7684;&#x4F9D;&#x846B;&#x82A6;&#x753B;&#x74E2;&#x3002;&#x6240;&#x4EE5;&#x7B2C;&#x4E8C;&#x6B21;&#x5B89;&#xFF0C;&#x4E5F;&#x662F;&#x4E0D;&#x592A;&#x987A;&#x5229;&#xFF0C;&#x6709;&#x4E00;&#x4E9B;&#x5730;&#x65B9;&#x4E5F;&#x5B8C;&#x5168;&#x5FD8;&#x4E86;&#x3002;&#x90A3;&#x4E5F;&#x5C31;&#x8BB0;&#x5F55;&#x4E00;&#x4E0B;&#x3002;</p>
+<a id="more"></a>
+<h2 id="&#x7B80;&#x8FF0;">&#x7B80;&#x8FF0;</h2>
+<p>&#x9996;&#x5148;&#x8BF4;&#x4E0B;&#x6211;&#x8FDC;&#x7A0B;&#x684C;&#x9762;&#x7684;&#x914D;&#x7F6E;&#x73AF;&#x5883;&#x662F;&#x672C;&#x5730;&#xFF08;Windows10&#xFF09;&#xFF0C;&#x7136;&#x540E;&#x7ED1;&#x5B9A;ip&#x5230;&#x4E91;&#x670D;&#x52A1;&#x5668;&#xFF08;Ubuntu&#xFF09;&#x3002;&#x7136;&#x540E;&#x7528;&#x7684;&#x4E3B;&#x8981;&#x5C31;&#x662F;<a href="https://github.com/fatedier/frp" target="_blank" rel="noopener">frp</a>&#xFF0C;&#x7136;&#x540E;&#x8FDB;&#x4E00;&#x6B65;&#x63D0;&#x5347;&#x4F7F;&#x7528;&#x4F53;&#x9A8C;&#xFF0C;&#x8FD8;&#x8981;&#x7528;&#x5230;<a href="http://nssm.cc/download" target="_blank" rel="noopener">NSSM</a>&#x548C;Nohup&#x3002;</p>
+<h2 id="level1">Level1</h2>
+<h3 id="windows&#x4E0A;">Windows&#x4E0A;</h3>
+<ol type="1">
+<li>&#x5728;&quot;&#x8BBE;&#x7F6E;&quot;&#x91CC;&#x6253;&#x5F00;&quot;&#x8FDC;&#x7A0B;&#x684C;&#x9762;&quot;&#xFF0C;&#x6253;&#x5F00;&quot;&#x542F;&#x7528;&#x8FDC;&#x7A0B;&#x684C;&#x9762;&quot;&#x3002;</li>
+<li>&#x4E0B;&#x8F7D;frp&#xFF1A;https://github.com/fatedier/frp/releases &#x53EF;&#x4EE5;&#x628A;Windows&#x548C;Linux&#x7684;&#x90FD;&#x5148;&#x4E0B;&#x8F7D;&#xFF0C;&#x7136;&#x540E;&#x914D;&#x7F6E;&#x597D;&#x4E86;&#xFF0C;&#x518D;&#x628A;Linux&#x7684;&#x4F20;&#x8FC7;&#x53BB;&#x3002;
+<ul>
+<li>Windows x64: https://github.com/fatedier/frp/releases/download/v0.20.0/frp_0.20.0_windows_amd64.zip</li>
+<li>Windows x32: https://github.com/fatedier/frp/releases/download/v0.20.0/frp_0.20.0_windows_386.zip</li>
+<li>Linux amd64(&#x4E0D;&#x77E5;&#x9053;&#x9009;&#x4EC0;&#x4E48;&#x7684;&#x8BDD; &#x53EF;&#x4EE5;&#x5148;&#x8BD5;&#x8BD5;&#x8FD9;&#x4E2A;): https://github.com/fatedier/frp/releases/download/v0.20.0/frp_0.20.0_linux_amd64.tar.gz</li>
+</ul></li>
+<li>&#x914D;&#x7F6E;frp&#x6587;&#x4EF6; &#x4E0B;&#x597D;&#x6253;&#x5F00;&#x4E4B;&#x540E;&#xFF0C;&#x91CC;&#x9762;&#x6709;7&#x4E2A;&#x6587;&#x4EF6;&#xFF0C;&#x5982;&#x4E0B;&#xFF1A; <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">frpc(.exe)      //&#x5BA2;&#x6237;&#x7AEF;&#x4E3B;&#x7A0B;&#x5E8F; [c]lient </span><br><span class="line">frpc.ini        //&#x5BA2;&#x6237;&#x7AEF;&#x914D;&#x7F6E;&#x6587;&#x4EF6;</span><br><span class="line">frpc_full.ini   </span><br><span class="line">frps(.exe)      //&#x670D;&#x52A1;&#x7AEF;&#x4E3B;&#x7A0B;&#x5E8F; [s]erver</span><br><span class="line">frps.ini        //&#x670D;&#x52A1;&#x7AEF;&#x914D;&#x7F6E;&#x6587;&#x4EF6;</span><br><span class="line">frps_full.ini   </span><br><span class="line">LICENSE</span><br></pre></td></tr></table></figure> Windows&#x8FD9;&#x91CC;&#x4F5C;&#x4E3A;&#x5BA2;&#x6237;&#x7AEF;&#xFF0C;&#x9700;&#x8981;frpc.exe&#x548C;frpc.ini Linux&#x4F5C;&#x4E3A;&#x670D;&#x52A1;&#x7AEF;&#xFF0C;&#x9700;&#x8981;frps&#x548C;frps.ini</li>
+</ol>
+<p>Windows&#x7684;frpc.ini&#x914D;&#x7F6E;&#x5185;&#x5BB9;&#xFF1A; <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">[common]</span><br><span class="line">server_addr = [&#x8FD9;&#x91CC;&#x6539;&#x6210;&#x4E91;&#x670D;&#x52A1;&#x5668;ip]</span><br><span class="line">server_port = 7000</span><br><span class="line"></span><br><span class="line">[remote-desktop]</span><br><span class="line">type = tcp</span><br><span class="line">local_ip = 127.0.0.1</span><br><span class="line">local_port = 3389</span><br><span class="line">remote_port = 3389</span><br></pre></td></tr></table></figure> Linux&#x7684;frps.ini&#x914D;&#x7F6E;&#x5185;&#x5BB9;(&#x8FD9;&#x4E2A;&#x9ED8;&#x8BA4;&#x5C31;&#x662F;&#x8FD9;&#x6837;)&#xFF1A; <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[common]</span><br><span class="line">bind_port = 7000</span><br></pre></td></tr></table></figure></p>
+<h3 id="linux&#x4E0A;">Linux&#x4E0A;</h3>
+<ol type="1">
+<li>&#x628A;&#x521A;&#x624D;&#x7684;frps&#x548C;frps.ini&#x590D;&#x5236;&#x5230;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x5939;&#x91CC;&#x3002;</li>
+<li>&#x8FD0;&#x884C; <figure class="highlight plain"><figcaption><span>-c ./frps.ini```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&#x7136;&#x540E;&#x56DE;&#x5230;Windows&#x8FD0;&#x884C;```./frpc.exe -c ./frpc.ini</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h3 id="&#x624B;&#x673A;&#x767B;&#x5F55;">&#x624B;&#x673A;&#x767B;&#x5F55;</h3>
+<ol type="1">
+<li>&#x5B89;&#x88C5;<a href="https://play.google.com/store/apps/details?id=com.microsoft.rdc.android&amp;hl=zh" target="_blank" rel="noopener">Microsoft Remote Desktop</a></li>
+<li>&#x7136;&#x540E;&#x53F3;&#x4E0A;&#x89D2;&#x201C;+&#x201D;&#xFF0C;&#x6DFB;&#x52A0;Desktop&#xFF0C;&#x7B2C;&#x4E00;&#x4E2A;&#x5C31;&#x662F; [&#x4E91;&#x670D;&#x52A1;&#x5668;ip]:3389 ,&#x7B2C;&#x4E8C;&#x4E2A;&#x5C31;&#x662F;Windows&#x7684;&#x8D26;&#x6237;</li>
+<li>&#x7136;&#x540E;&#x5C31;&#x53EF;&#x4EE5;&#x4E86;&#x3002;</li>
+</ol>
+<h2 id="level-up">Level Up</h2>
+<h3 id="windows-&#x5F00;&#x673A;&#x542F;&#x52A8;frp&#x670D;&#x52A1;">Windows &#x5F00;&#x673A;&#x542F;&#x52A8;frp&#x670D;&#x52A1;</h3>
+<ol type="1">
+<li>&#x5EFA;&#x4E2A;bat&#x653E;&#x5728;frpc.exe&#x7684;&#x540C;&#x4E2A;&#x76EE;&#x5F55;&#x4E0B;&#xFF0C;&#x53EF;&#x4EE5;&#x53EB;run.bat &#x91CC;&#x9762;&#x5199;&#x4E0A;<code>frpc.exe -c ./frpc.ini</code></li>
+<li>&#x4E0B;&#x8F7D;NSSM http://nssm.cc/release/nssm-2.24.zip nssm.exe&#x5E76;&#x4E0D;&#x80FD;&#x76F4;&#x63A5;&#x7528;&#x3002; &#x5148;&#x6253;&#x5F00;&#x547D;&#x4EE4;&#x884C;&#x8FD0;&#x884C;<code>nssm.exe install frp</code>&#x3002; &#x7136;&#x540E;&#x5728;&#x5F39;&#x51FA;&#x7684;&#x754C;&#x9762;&#x91CC;&#xFF0C;&#x7B2C;&#x4E00;&#x4E2A;&#x9009;&#x4E0A;&#x4E4B;&#x524D;&#x7684;bat&#x6587;&#x4EF6;</li>
+<li>&#x6253;&#x5F00;&quot;&#x8BA1;&#x7B97;&#x673A;&#x7BA1;&#x7406;-&#x670D;&#x52A1;&#x548C;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;-&#x670D;&#x52A1;&quot;&#xFF0C;&#x627E;&#x5230;frp&#xFF0C;&#x542F;&#x52A8;&#x3002; ### Linux&#x540E;&#x53F0;&#x8FD0;&#x884C;</li>
+<li><code>nohup ./frps -c ./frps.ini &amp;</code></li>
+<li>&#x5982;&#x679C;&#x6CA1;&#x6709;nohup&#x7684;&#x8BDD;&#xFF08;&#x4E0D;&#x77E5;&#x9053;&#x6709;&#x6CA1;&#x6709;&#x8FD9;&#x4E2A;&#x53EF;&#x80FD;&#xFF09; &#x5C31;&#x5148;&#x8FD0;&#x884C;<code>apt-get install nohup</code>&#xFF0C;&#x518D;&#x8FD0;&#x884C;&#x7B2C;&#x4E00;&#x6B65;&#x3002;</li>
+</ol>
+<h3 id="&#x6700;&#x540E;">&#x6700;&#x540E;</h3>
+<p>&#x4F60;&#x53EF;&#x4EE5;&#x8BD5;&#x4E0B;&#x91CD;&#x542F;&#x7535;&#x8111;&#xFF0C;&#x7136;&#x540E;&#x8BD5;&#x8BD5;&#x6548;&#x679C;</p>
+
+      
+    </div>
+
+  </div>
+
+  <div class="article-footer">
+    <div class="article-meta pull-left">
+
+    
+      
+
+    <span class="post-categories">
+      <i class="icon-categories"></i>
+        <a href="/categories/技术/">技术</a>
+    </span>
+    
+
+    
+    
+
+    <span class="post-tags">
+      <i class="icon-tags"></i>
+        <a href="/tags/技术/">技术</a>
+    </span>
+    
+
+    </div>
+
+    
+  </div>
+</article>
+
+  
+
+
+
+
+
+
+    </main>
+
+    <footer class="site-footer">
+  <p class="site-info">
+    Proudly powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and
+    Theme by <a href="https://github.com/CodeDaraW/Hacker" target="_blank">Hacker</a>
+    </br>
+    
+    &copy; 2021 Rainbow Yang
+    
+  </p>
+</footer>
+    
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-93934873-1', 'auto');
+    ga('send', 'pageview');
+
+</script>
+
+    
+  </div>
+</div>
+</body>
+</html>

@@ -3,14 +3,12 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Page 2 | 离梦之殇 | 如梦之境</title>
+  <title>Page 2 | 离梦之殇 如梦之境 | To See Outer. To See Inner.</title>
 
   
   <meta name="author" content="Rainbow Yang">
   
 
-  
-  <meta name="description" content="To See Outer.To See Inner.">
   
 
   
@@ -21,14 +19,14 @@
 
   
 
-  <meta property="og:site_name" content="离梦之殇"/>
+  <meta property="og:site_name" content="离梦之殇 如梦之境"/>
 
   
   <meta property="og:image" content="/favicon.ico"/>
   
 
   <link href="/favicon.ico" rel="icon">
-  <link rel="alternate" href="/atom.xml" title="离梦之殇" type="application/atom+xml">
+  <link rel="alternate" href="/atom.xml" title="离梦之殇 如梦之境" type="application/atom+xml">
   <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
 <meta name="generator" content="Hexo 4.2.1"></head>
 
@@ -40,9 +38,9 @@
     <header>
   <div class="site-branding">
     <h1 class="site-title">
-      <a href="/">离梦之殇</a>
+      <a href="/">离梦之殇 如梦之境</a>
     </h1>
-    <p class="site-description">如梦之境</p>
+    <p class="site-description">To See Outer. To See Inner.</p>
   </div>
   <nav class="site-navigation">
     <ul>
@@ -67,168 +65,13 @@
 
   
     
-    <h3 class="article-title"><a href="/post/2018/8/Reinstall-Hexo.html"><span>重新安装Hexo，并部署到云服务器</span></a></h3>
+    <h3 class="article-title"><a href="/post/2018/04/Daily-Talk-1.html"><span>随谈</span></a></h3>
     
   
 
   <div class="article-top-meta">
     <span class="posted-on">
-      <a href="/post/2018/8/Reinstall-Hexo.html" rel="bookmark">
-        <time class="entry-date published" datetime="2018-08-06T11:22:45.000Z">
-          2018-08-06
-        </time>
-      </a>
-    </span>
-  </div>
-
-
-  
-
-  <div class="article-content">
-    <div class="entry">
-      
-        <h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2>
-<p>其实是重装了PC和云服务器，清理垃圾（linux用不来，xjb弄了好多莫名奇妙的东西），然后也就把东西重装一遍。</p>
-<h2 id="简述"><a class="markdownIt-Anchor" href="#简述"></a> 简述</h2>
-<p>主要就是三步：<br />
-1.在本地上装好Hexo<br />
-2.本地到云服务器用Git进行传递<br />
-3.云服务器用Nginx进行网站的部署</p>
-<h2 id="step1-在本地上装好hexo"><a class="markdownIt-Anchor" href="#step1-在本地上装好hexo"></a> Step1 在本地上装好<a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">Hexo</a></h2>
-<p>（本Step的指令都是右键Git Bash Here，然后运行）<br />
-（复制并输入指令时，请忽略<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">和</mi></mrow><annotation encoding="application/x-tex">和</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0em;vertical-align:0em;"></span><span class="mord cjk_fallback">和</span></span></span></span>之后的第一个空格，因为Git Bash已经有了）</p>
-<h3 id="1-装好git和nodejs"><a class="markdownIt-Anchor" href="#1-装好git和nodejs"></a> 1. 装好<a href="https://git-scm.com/" target="_blank" rel="noopener">Git</a>和<a href="https://nodejs.org/en/" target="_blank" rel="noopener">Node.js</a>。</h3>
-<p><a></a></p>
-<h3 id="2-安装hexo的库"><a class="markdownIt-Anchor" href="#2-安装hexo的库"></a> 2. 安装Hexo的库。</h3>
- <figure class="highlight plain"><figcaption><span>npm install -g hexo```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"> </span><br><span class="line">### 3. 生成hexo的工作文件夹。</span><br><span class="line"> &#96;&#96;&#96;$ hexo init [文件夹路径]&#96;&#96;&#96;（如省略，则默认在右键开启Git Bash的文件夹生成）</span><br><span class="line"> </span><br><span class="line">### 4. 进入工作文件夹。</span><br><span class="line"> &#96;&#96;&#96;$ cd [文件夹路径]&#96;&#96;&#96;（第3步如果省略的话，那么当前已经是在工作文件夹了）</span><br><span class="line"> </span><br><span class="line">### 5. 安装git部署库</span><br><span class="line"> &#96;&#96;&#96;$ npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
-<h3 id="6-为了用密钥登陆要生成公钥和密钥"><a class="markdownIt-Anchor" href="#6-为了用密钥登陆要生成公钥和密钥"></a> 6. 为了用密钥登陆，要生成公钥和密钥。</h3>
- <figure class="highlight plain"><figcaption><span>ssh-keygen -t rsa```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;span id&#x3D;&quot;end-of-step1&quot;&gt;&lt;&#x2F;span&gt;</span><br><span class="line">### 常用的[指令](https:&#x2F;&#x2F;hexo.io&#x2F;zh-cn&#x2F;docs&#x2F;commands)</span><br></pre></td></tr></table></figure>
-<p>渲染:$ hexo g<br />
-本地服务器:$ hexo s<br />
-远程部署(git)😒 hexo d</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">## Step2 用Git进行部署</span><br><span class="line">首先要登录到云服务器的root。</span><br><span class="line"></span><br><span class="line">### 1. 安装Git</span><br><span class="line"> &#96;&#96;&#96;apt-get install git</span><br></pre></td></tr></table></figure>
-<h3 id="2-git用户"><a class="markdownIt-Anchor" href="#2-git用户"></a> 2. Git用户</h3>
-<ul>
-<li>1.创建git用户</li>
-</ul>
- <figure class="highlight plain"><figcaption><span>git```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">+ 2.修改git权限</span><br><span class="line">    + 修改sudoers的文件权限，使其可以修改</span><br><span class="line">    &#96;&#96;&#96;chmod 740 &#x2F;etc&#x2F;sudoers</span><br></pre></td></tr></table></figure>
-<pre><code>+ 进入sudoers文件
-<figure class="highlight vim"><figcaption><span>/etc/sudoers```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">    先按i，进入输入状态。</span><br><span class="line">    最后加上一行git	ALL=(ALL) 。</span><br><span class="line">    按Esc退出输出状态。</span><br><span class="line">    再输入“:<span class="keyword">wq</span>” ,退出并保存。</span><br><span class="line"></span><br><span class="line">+ 修改sudoers的文件权限，使其不可以修改</span><br><span class="line">```chmod <span class="number">440</span> /etc/sudoers</span><br></pre></td></tr></table></figure>
-</code></pre>
-<h3 id="3-公钥"><a class="markdownIt-Anchor" href="#3-公钥"></a> 3. 公钥</h3>
-<ul>
-<li>1.进入git用户</li>
-</ul>
- <figure class="highlight plain"><figcaption><span>git```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">+ 2.进入git根目录文件夹</span><br><span class="line"> &#96;&#96;&#96;cd ~</span><br></pre></td></tr></table></figure>
-<ul>
-<li>3.创建公钥文件夹</li>
-</ul>
- <figure class="highlight plain"><figcaption><span>.ssh```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">+ 4.创建公钥文件</span><br><span class="line"> &#96;&#96;&#96;vim .&#x2F;.ssh&#x2F;authorized_keys</span><br></pre></td></tr></table></figure>
-<pre><code>+ 将之前在本地电脑生成的公钥内容（id_rsa.pub）复制到这个文件
-+ id_rsa.pub 一般会在C:\Users\\[Your Name]\\.ssh 里，或者可以直接搜索这个文件
-</code></pre>
-<h3 id="4-git仓库"><a class="markdownIt-Anchor" href="#4-git仓库"></a> 4. git仓库</h3>
-<ul>
-<li>1.创建hexo.git文件夹</li>
-</ul>
- <figure class="highlight plain"><figcaption><span>hexo.git```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">+ 2.进入hexo.git文件夹</span><br><span class="line"> &#96;&#96;&#96;cd hexo.git</span><br></pre></td></tr></table></figure>
-<ul>
-<li>3.建立git仓库</li>
-</ul>
- <figure class="highlight plain"><figcaption><span>init --bare```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">### 5. Hexo静态网址仓库</span><br><span class="line">+ 1.切换回root用户(指令中的root可以去掉，因为是默认)</span><br><span class="line"> &#96;&#96;&#96;su root</span><br></pre></td></tr></table></figure>
-<ul>
-<li>2.创建hexo静态网址文件夹</li>
-</ul>
- <figure class="highlight plain"><figcaption><span>/var/www/hexo```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">+ 3.给予git用户相关权限</span><br><span class="line"> &#96;&#96;&#96;chown git:git -R &#x2F;var&#x2F;www&#x2F;hexo</span><br></pre></td></tr></table></figure>
-<ul>
-<li>4.切换回git用户</li>
-</ul>
- <figure class="highlight plain"><figcaption><span>git```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">+ 5.git hooks</span><br><span class="line">    + 创建hooks文件</span><br><span class="line">    &#96;&#96;&#96;vim &#x2F;home&#x2F;git&#x2F;hexo.git&#x2F;hooks&#x2F;post-receive</span><br></pre></td></tr></table></figure>
-<pre><code>+ 添加内容
-    <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">#!&#x2F;bin&#x2F;bash</span><br><span class="line">GIT_REPO&#x3D;&#x2F;home&#x2F;git&#x2F;hexo.git</span><br><span class="line">TMP_GIT_CLONE&#x3D;&#x2F;tmp&#x2F;hexo</span><br><span class="line">PUBLIC_WWW&#x3D;&#x2F;var&#x2F;www&#x2F;hexo</span><br><span class="line">rm -rf \$&#123;TMP_GIT_CLONE&#125;</span><br><span class="line">git clone \$GIT_REPO \$TMP_GIT_CLONE</span><br><span class="line">rm -rf \$&#123;PUBLIC_WWW&#125;&#x2F;*</span><br><span class="line">cp -rf \$&#123;TMP_GIT_CLONE&#125;&#x2F;* \$&#123;PUBLIC_WWW&#125;</span><br></pre></td></tr></table></figure>
-+ 为hooks文件添加运行权限
-<figure class="highlight plain"><figcaption><span>+x</span><a href="/home/git/hexo.git/hooks/post-receive```">link</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">### 6.另外</span><br><span class="line">部署Hexo需要在本地电脑运行，见[Step1结尾](#end-of-step1)。</span><br><span class="line"></span><br><span class="line">## Step3 Nginx部署静态网站</span><br><span class="line">### 1. 安装Nginx</span><br><span class="line"> &#96;&#96;&#96;apt-get install nginx</span><br></pre></td></tr></table></figure>
-</code></pre>
-<h3 id="2-网站配置文件"><a class="markdownIt-Anchor" href="#2-网站配置文件"></a> 2. 网站配置文件</h3>
- <figure class="highlight vim"><figcaption><span>/etc/nginx/sites-enabled/default```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"> </span><br><span class="line">文件中有一些示例，要先用#注释或删除，然后在添加内容</span><br></pre></td></tr></table></figure>
-<p>server{<br />
-listen 80;<br />
-listen [::]:80;</p>
-<pre><code>server_name yourDomain;
-
-root /var/www/hexo;
-index index.html;
-
-location / {
-    try_files \$uri \$uri/ =404;
-}
-</code></pre>
-<p>}</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">### 3. 重启Nginx</span><br><span class="line"> &#96;&#96;&#96;service nginx restart</span><br></pre></td></tr></table></figure>
-<h3 id="4-完毕"><a class="markdownIt-Anchor" href="#4-完毕"></a> 4. 完毕</h3>
-<p>可以用域名或者服务器ip地址访问了。<br />
-但是如果被和我一样，因为没有备份然后被运营商拦截了，可以考虑下面Step4，加密之后就不会被拦截了</p>
-<h2 id="附加step4添加ca证书进行加密"><a class="markdownIt-Anchor" href="#附加step4添加ca证书进行加密"></a> (附加)Step4.添加CA证书进行加密</h2>
-<p>参考并使用<a href="https://github.com/Neilpang/acme.sh/wiki/%E8%AF%B4%E6%98%8E" target="_blank" rel="noopener">Neilpang/acme.sh</a>，下面简易介绍。</p>
-<h3 id="0-为了方便和避免出问题切换到root"><a class="markdownIt-Anchor" href="#0-为了方便和避免出问题切换到root"></a> 0. 为了方便，和避免出问题，切换到root</h3>
- <figure class="highlight plain"><figcaption><span>root```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">### 1. 安装acme.sh</span><br><span class="line"> &#96;&#96;&#96;curl  https:&#x2F;&#x2F;get.acme.sh | sh</span><br></pre></td></tr></table></figure>
-<h3 id="2-添加简写链接"><a class="markdownIt-Anchor" href="#2-添加简写链接"></a> 2. 添加简写链接</h3>
- <figure class="highlight plain"><figcaption><span>acme.sh</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">### 3. 域名和服务器所有权证明</span><br><span class="line">+ 1.生成TXT验证字段</span><br><span class="line">如果有多个域名，可以在第一个域名后面再加上&quot;-d [your-other-domain]&quot;，注意空格隔开。</span><br><span class="line"> &#96;&#96;&#96;acme.sh --issue -d [your-domain] --dns --yes-I-know-dns-manual-mode-enough-go-ahead-please</span><br></pre></td></tr></table></figure>
-<ul>
-<li>2.添加TXT记录（输出已经讲的很清楚了）<br />
-在域名的DNS解析管理里给_acme-challenge.[your-domain]添加TXT记录。<br />
-内容来自输出，字段已经高亮显示。</li>
-<li>3.生成CA证书</li>
-</ul>
- <figure class="highlight plain"><figcaption><span>--renew -d [your-domain] --yes-I-know-dns-manual-mode-enough-go-ahead-please```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">证书会在&#x2F;root&#x2F;.acme.sh&#x2F;[your-domain]&#x2F;[your-domain].cer</span><br><span class="line"></span><br><span class="line">### 4. 配置CA证书到Nginx（修改网站配置文件）</span><br><span class="line">+ 将 listen 的&quot;80&quot;改成&quot;443 ssl&quot;</span><br><span class="line">+ 然后在下面添加</span><br></pre></td></tr></table></figure>
-<p>ssl_certificate	/root/.acme.sh/[your-domain]/[your-domain].cer;<br />
-ssl_certificate_key	/root/.acme.sh/[your-domain]/[your-domain].key;</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">### 5. 重启Nginx</span><br><span class="line"> &#96;&#96;&#96;service nginx restart</span><br></pre></td></tr></table></figure>
-      
-    </div>
-
-  </div>
-
-  <div class="article-footer">
-    <div class="article-meta pull-left">
-
-    
-      
-
-    <span class="post-categories">
-      <i class="icon-categories"></i>
-        <a href="/categories/技术/">技术</a>
-    </span>
-    
-
-    
-    
-
-    <span class="post-tags">
-      <i class="icon-tags"></i>
-        <a href="/tags/技术/">技术</a><a href="/tags/博客/">博客</a>
-    </span>
-    
-
-    </div>
-
-    
-  </div>
-</article>
-
-
-
-  <article>
-
-  
-    
-    <h3 class="article-title"><a href="/post/2018/4/Daily-Talk-1.html"><span>随谈</span></a></h3>
-    
-  
-
-  <div class="article-top-meta">
-    <span class="posted-on">
-      <a href="/post/2018/4/Daily-Talk-1.html" rel="bookmark">
+      <a href="/post/2018/04/Daily-Talk-1.html" rel="bookmark">
         <time class="entry-date published" datetime="2018-04-29T13:47:15.000Z">
           2018-04-29
         </time>
@@ -243,16 +86,9 @@ ssl_certificate_key	/root/.acme.sh/[your-domain]/[your-domain].key;</p>
     <div class="entry">
       
         <p>自去年起，便许久不写博客了。打算晚上扯点什么。</p>
-<p>说实话我不是一个喜欢把生活动态一直记录下来的人，包括在某企鹅的那个好友动态上也不常发过什么说说。因为当你发了说说之后，如没人留言加点赞似乎便有些奇怪，有人留言不回复又不可取。特别是发了个说说之后，貌似会被以消息的方式被推送到好友，但也不一定，具体的推送我还没看懂。</p>
-<p>但由于说实话，自己并不喜欢无聊的交际来扩充自己的交际圈或者说人脉，总之显得似乎有些格格不入，生日礼物的互送也往往没有我的参与。正所谓礼尚往来，比如说当表弟的妈妈给了我压岁钱的时候，我妈就应该也给表弟压岁钱以示回应。当别人送了生日礼物之后，收礼者也当还之。在一帮似乎迷恋“农药”游戏的同学之间，这就成了互送游戏里的皮肤。在这里也并不是想说这种事不好，但我总觉得毫无兴致维持看似广袤的交际。</p>
-<p>由此，这个博客网址我也从未曾向班里同学推荐过<del>（都没什么东西，你还好意思推荐）</del></p>
-<p>自去年11月起，一直到现在浙江的选考尘埃落定，表面上看似是在精心准备考试（<del>话说也是有两科(物理，技术)100，一科（化学）91[手动滑稽]</del>）而疏于在技术方面的学习 。但真正的更是心没有静下来，没有找到自己真正想做的事情。或者更应该说是，似乎不知道自己到底向往那个方向走。</p>
-<p>在之前的几个月里，平时回到家也不看书，也没研究什么。时间主要被消遣在无太大意义的网上闲逛，偶尔看到什么也难以静下心来去认真研究。一方面主要是因为一星期只放不到24小时，回到家似乎失去什么动力；另一方面，就是每星期积累下来的懒，周周复返，想着好久也都没干什么了，这次也就算了。有些东西被迫停止之后，再要动起来可能就更费力了（正如最大静摩擦力大于滑动摩擦力）。</p>
-<p>在浙江高考模式的选考结束之后，剩下的便是语数外（有些人英语也不学了）。学校的排课也变得霸气无比，三门课排列也就是3!＝６，所以一周六天的课变的每天都不一样，真是每天都有新鲜感，新鲜感爆棚呢。至于上的课也陷入某种诡异的重复，语文是发试卷机加PPT答案放映员，数学是懵逼思路大讲加算到一半太烦了好了就这样答案抄一下，英语是全中文讲解除了some extramely perfect words and some extramely perfect phrases and some extramely perfect sentenses.　有多少老师紧紧握住考试大纲好似尚方宝剑，感觉出那些高考不会考的题目的人都是水平低，又有多少老师将印刷体书写、句式结构复杂、但真实意义犹如狗屎的文章视如范文。当在英语老师将语法结构凌驾于句意之上，甚至觉得被动句就是比主动句好的时候，英语教学又会是何去何从？</p>
-<p>当高中最后的学习纯粹只是为高考分数，当老师重点的关注对象就是那些最好的和临界的（上了什么什么线可以加人头），学校不会再去在意你到底学到了什么，只在乎你考了多少，一个个生命的青春终而只能成为一张破纸上的数据，甚至还惨不忍睹。当班主任习惯性的只凭几个数字来感觉一个人的状态，无关而有用（甚至是别人觉的没用的）的东西都要被迫靠边站吗？或觉为了上一个好的大学来接受所谓的更好教育，暂时放一下所谓与高考无关事情又无妨。但这种事在初中不曾出现么？为了进重点高中，是否也曾放下？而今再次放下。一次一次的放弃抹杀着本就偶然而得的兴趣与爱好。为了将来而放下眼前去苟且，这会是勾践的卧薪尝胆么？</p>
-<p>当一个人愿意用眼前苟且来换取他人所说的未来的空中楼阁，那么大学并不会是个尽头，而更是个开始，正如一匹被一根绑在自己身上的胡萝卜吸引着向前的驴。</p>
-<p>不断向前苟且，终将湮为灰烬。</p>
-
+        
+          <p><a class="excerpt-btn" href="post/2018/04/Daily-Talk-1.html"><span>...More</span></a></p>
+        
       
     </div>
 
@@ -291,13 +127,13 @@ ssl_certificate_key	/root/.acme.sh/[your-domain]/[your-domain].key;</p>
 
   
     
-    <h3 class="article-title"><a href="/post/2017/9/Space-1.html"><span>空间探索[1]:高维探索</span></a></h3>
+    <h3 class="article-title"><a href="/post/2017/09/Space-1.html"><span>空间探索[1]:高维探索</span></a></h3>
     
   
 
   <div class="article-top-meta">
     <span class="posted-on">
-      <a href="/post/2017/9/Space-1.html" rel="bookmark">
+      <a href="/post/2017/09/Space-1.html" rel="bookmark">
         <time class="entry-date published" datetime="2017-09-30T12:51:00.000Z">
           2017-09-30
         </time>
@@ -311,55 +147,12 @@ ssl_certificate_key	/root/.acme.sh/[your-domain]/[your-domain].key;</p>
   <div class="article-content">
     <div class="entry">
       
-        <h2 id="引子"><a class="markdownIt-Anchor" href="#引子"></a> 引子</h2>
+        <h2 id="引子">引子</h2>
 <p>我们处在三维空间之中(别扯四维时空，你先要知道那到底是啥)，所以对于三维空间的理解和想象都显得十分的自然。</p>
 <p>但是三维空间之上，比如四维空间，到底意味这什么？ 在这里，我并不是想涉及到其物理意义，而只是纯粹的数学上的欧几里得空间。</p>
-<h2 id="维"><a class="markdownIt-Anchor" href="#维"></a> 维</h2>
-<p>维度，意味着一个独一无二的方向。它只能由它自己来表达，其他的维度投影到这个方向上都应该成为一个点。</p>
-<p>这就意味着所有的维度都是正交（垂直）的，然后一起张开了这个几何空间。</p>
-<p>维度其实也可以看成一个轴，在下面我可能会混合使用。</p>
-<h3 id="表示方法"><a class="markdownIt-Anchor" href="#表示方法"></a> 表示方法</h3>
-<h4 id="引入"><a class="markdownIt-Anchor" href="#引入"></a> 引入</h4>
-<p>首先想象一个三维坐标系，然后把它投影在在一个平面上（其实就算在脑海里，它也已经是二维的，只是感觉是三维）。</p>
-<p>可以把他画在纸上，很显然在一张二维的纸上，要画三个维度（坐标轴）并且让他们互相垂直是不可能的。</p>
-<p>所以对于第三维度（z 轴），一般会在 x 轴向右，y 轴向上的情况下，把 z 轴向左下角画。虽然并没有垂直，但是可以自然的感到这是由于投影造成的。</p>
-<p>由于习惯了对三维的思考，所以这种画在二维的三维图像还是很容易还原回成三维的感觉。</p>
-<p>事实上，作为三维生物，我们的眼睛看到的其实是二维的东西（也就是那层视网膜所得到的）。</p>
-<p>包括平时生活中的各种显示器也就都是二维的，要想在上面显示出一个东西，那也就是二维的图像。</p>
-<h4 id="表示"><a class="markdownIt-Anchor" href="#表示"></a> 表示</h4>
-<p>那么归根结底，一个维度投影到我们所看到的二维上，就可以用一个视觉角度（<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>θ</mi><mi>s</mi></mrow><annotation encoding="application/x-tex">θs</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">θ</span><span class="mord mathdefault">s</span></span></span></span>）和一个视觉长度（<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>l</mi><mi>s</mi></mrow><annotation encoding="application/x-tex">ls</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">s</span></span></span></span>）来表示了。</p>
-<h5 id="视觉角度"><a class="markdownIt-Anchor" href="#视觉角度"></a> 视觉角度</h5>
-<p>这个视觉角度，其实也就是上下左右的方向，用一个角度就可以表示了。这个角度我更习惯于以 3 点钟方向为开始，然后逆时针递增（其实也就是平面直角坐标系里面类似的倾斜角的定义）。</p>
-<h5 id="视觉长度"><a class="markdownIt-Anchor" href="#视觉长度"></a> 视觉长度</h5>
-<p>至于视觉长度，其实并不是说其单位长度有多长，而是看上去的长度和原来的长度的比值。</p>
-<p>也就是说当观察者的视线和这个维度垂直的时候，看到的是最长的（我把这定为 1，或者理解为 100%）；然后想象一下把这个维度慢慢地朝着自己，最后当它完全指向你的时候，所能看到的就是一个点（这就是 0%）。</p>
-<p>那么定义视线和维度的夹角为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>θ</mi><mi>s</mi></mrow><annotation encoding="application/x-tex">θs</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">θ</span><span class="mord mathdefault">s</span></span></span></span>，那么上面说的这个值也就是 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>s</mi><mi>i</mi><mi>n</mi><mo stretchy="false">(</mo><mi>θ</mi><mi>s</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">sin(θs)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">s</span><span class="mord mathdefault">i</span><span class="mord mathdefault">n</span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.02778em;">θ</span><span class="mord mathdefault">s</span><span class="mclose">)</span></span></span></span>。</p>
-<p>所以一个轴就可以定义为（角度，视觉长度）</p>
-<p>我们所习惯的平面直角坐标系就可以用{ x 轴(0°，100%), y 轴(90°，100%) }来表示（但是我更习惯弧度，也就是{ x 轴(0，1), y 轴(π/2，1) }）。</p>
-<p>在这里也可以用一个复数来表示一个维度，其幅角和模刚好对应上面的角度和视觉长度，所以上面那个二维的坐标系也可以表示为也就是{ x 轴(1+0i), y 轴(0+1i) }。</p>
-<h2 id="坐标系"><a class="markdownIt-Anchor" href="#坐标系"></a> 坐标系</h2>
-<p>坐标系，由一些应该在其空间上相互垂直的维度组成。</p>
-<p>虽然可以在二维的屏幕上用上面的方式表示维度的投影之后的样子，但这并不意味这任意的组合都可以给人一种所有的轴之间互相垂直的感觉。</p>
-<h3 id="简单维度"><a class="markdownIt-Anchor" href="#简单维度"></a> 简单维度</h3>
-<h4 id="二维"><a class="markdownIt-Anchor" href="#二维"></a> 二维</h4>
-<p>在二维的时候，视觉长度无疑都应该是 100%。（不然就是像三维的了）</p>
-<p>但是对于其角度，就应该满足差为 90°。因为只有这样才有维度之间垂直的感觉。</p>
-<h4 id="三维"><a class="markdownIt-Anchor" href="#三维"></a> 三维</h4>
-<p>可以先想象一下二维坐标系，然后想象着第三维（z 轴）在这个时候正对着你（就像俯视还没发射的火箭？）。</p>
-<p>接着将 z 轴与视线偏离，这时 z 轴的视觉长度将会从 0 开始增加，同时 x 轴和 y 轴的视觉长度会被向 z 轴的压缩。</p>
-<h3 id="高维推广"><a class="markdownIt-Anchor" href="#高维推广"></a> 高维推广</h3>
-<p>既然在上面的三维里面，当增加一个维度的视觉长度的时候，会导致其他维度视觉长度的减少，那么会不会有一个特殊的等式呢？</p>
-<p>事实如此，在三维的情况下，假设有以原点为起点，分别以（R,0,0），（0,R,0），（0,0,R）为终点的三条线段同时平行投影到一个平面上，那么其长度的平方和为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>2</mn><msup><mi>R</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">2R^2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord">2</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span>。</p>
-<p>当然在二维的时候，这个结论也毫无疑问的成立。</p>
-<p>那么为什么不能推广到高维呢？</p>
-<h4 id="从二维到三维"><a class="markdownIt-Anchor" href="#从二维到三维"></a> 从二维到三维</h4>
-<p>假设在平面上有一个圆，无论怎么旋转，它仍然是一个圆。</p>
-<p>除非偏离垂直那个平面的视线，从侧面看它。这时候，这个圆就毫无疑问变成了看上去的椭圆，但是都可以看出这就是圆。这都是因为在三维的世界中生活，让这种变形非常容易理解。</p>
-<h4 id="从三维到四维"><a class="markdownIt-Anchor" href="#从三维到四维"></a> 从三维到四维</h4>
-<p>同样的，想象一个球，无论怎么旋转，它仍然是一个球。</p>
-<p>那么，然后视线偏离！</p>
-<p>你可以想象一个画在平面上的球，然后像二维到三维一样，从侧面去看，那么正如圆变成椭圆一样，这个在三维不管怎么看都一样的球变成了一个椭球。</p>
-
+        
+          <p><a class="excerpt-btn" href="post/2017/09/Space-1.html"><span>...More</span></a></p>
+        
       
     </div>
 
@@ -398,13 +191,13 @@ ssl_certificate_key	/root/.acme.sh/[your-domain]/[your-domain].key;</p>
 
   
     
-    <h3 class="article-title"><a href="/post/2017/9/Space-0.html"><span>空间探索[0]:前言</span></a></h3>
+    <h3 class="article-title"><a href="/post/2017/09/Space-0.html"><span>空间探索[0]:前言</span></a></h3>
     
   
 
   <div class="article-top-meta">
     <span class="posted-on">
-      <a href="/post/2017/9/Space-0.html" rel="bookmark">
+      <a href="/post/2017/09/Space-0.html" rel="bookmark">
         <time class="entry-date published" datetime="2017-09-30T12:12:00.000Z">
           2017-09-30
         </time>
@@ -418,13 +211,10 @@ ssl_certificate_key	/root/.acme.sh/[your-domain]/[your-domain].key;</p>
   <div class="article-content">
     <div class="entry">
       
-        <p>空间，在这里我更想说的是数学意义上的空间。你或许对三维空间习以为常，但是可曾想过四维呢？</p>
-<p>在做<a href="https://github.com/RainbowYang/FunctionPainter" target="_blank" rel="noopener">FunctionPainter</a>的时候，引发了一些我对于空间可视化的探索和思考，继而得到一些想法或说是猜测。</p>
-<p>这些想法零零总总，所以想在这记录下来。</p>
-<p>下面是编号,但前后不一定有什么密切的逻辑顺序.</p>
-<ol>
-<li><a href="/post/Math/Space-1.html">空间探索[1]:高维探索</a></li>
-</ol>
+        <p>&#x7A7A;&#x95F4;&#xFF0C;&#x5728;&#x8FD9;&#x91CC;&#x6211;&#x66F4;&#x60F3;&#x8BF4;&#x7684;&#x662F;&#x6570;&#x5B66;&#x610F;&#x4E49;&#x4E0A;&#x7684;&#x7A7A;&#x95F4;&#x3002;&#x4F60;&#x6216;&#x8BB8;&#x5BF9;&#x4E09;&#x7EF4;&#x7A7A;&#x95F4;&#x4E60;&#x4EE5;&#x4E3A;&#x5E38;&#xFF0C;&#x4F46;&#x662F;&#x53EF;&#x66FE;&#x60F3;&#x8FC7;&#x56DB;&#x7EF4;&#x5462;&#xFF1F;</p>
+<p>&#x5728;&#x505A;<a href="https://github.com/RainbowYang/FunctionPainter" target="_blank" rel="noopener">FunctionPainter</a>&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5F15;&#x53D1;&#x4E86;&#x4E00;&#x4E9B;&#x6211;&#x5BF9;&#x4E8E;&#x7A7A;&#x95F4;&#x53EF;&#x89C6;&#x5316;&#x7684;&#x63A2;&#x7D22;&#x548C;&#x601D;&#x8003;&#xFF0C;&#x7EE7;&#x800C;&#x5F97;&#x5230;&#x4E00;&#x4E9B;&#x60F3;&#x6CD5;&#x6216;&#x8BF4;&#x662F;&#x731C;&#x6D4B;&#x3002;</p>
+<p>&#x8FD9;&#x4E9B;&#x60F3;&#x6CD5;&#x96F6;&#x96F6;&#x603B;&#x603B;&#xFF0C;&#x6240;&#x4EE5;&#x60F3;&#x5728;&#x8FD9;&#x8BB0;&#x5F55;&#x4E0B;&#x6765;&#x3002;</p>
+<p>&#x4E0B;&#x9762;&#x662F;&#x7F16;&#x53F7;,&#x4F46;&#x524D;&#x540E;&#x4E0D;&#x4E00;&#x5B9A;&#x6709;&#x4EC0;&#x4E48;&#x5BC6;&#x5207;&#x7684;&#x903B;&#x8F91;&#x987A;&#x5E8F;. 1. <a href="/post/Math/Space-1.html">&#x7A7A;&#x95F4;&#x63A2;&#x7D22;[1]:&#x9AD8;&#x7EF4;&#x63A2;&#x7D22;</a></p>
 
       
     </div>
@@ -464,13 +254,13 @@ ssl_certificate_key	/root/.acme.sh/[your-domain]/[your-domain].key;</p>
 
   
     
-    <h3 class="article-title"><a href="/post/2017/5/Thinking-at-17.html"><span>十七之思</span></a></h3>
+    <h3 class="article-title"><a href="/post/2017/05/Thinking-at-17.html"><span>十七之思</span></a></h3>
     
   
 
   <div class="article-top-meta">
     <span class="posted-on">
-      <a href="/post/2017/5/Thinking-at-17.html" rel="bookmark">
+      <a href="/post/2017/05/Thinking-at-17.html" rel="bookmark">
         <time class="entry-date published" datetime="2017-05-30T02:21:00.000Z">
           2017-05-30
         </time>
@@ -484,13 +274,13 @@ ssl_certificate_key	/root/.acme.sh/[your-domain]/[your-domain].key;</p>
   <div class="article-content">
     <div class="entry">
       
-        <h2 id="十七岁终于向我走来"><a class="markdownIt-Anchor" href="#十七岁终于向我走来"></a> 十七岁终于向我走来</h2>
-<p>Rainbow总觉得十七是个挺神奇的数字。</p>
-<h2 id="世界"><a class="markdownIt-Anchor" href="#世界"></a> 世界</h2>
-<p>世界已经一点点在我们面前展开，充满活力与生气的时代已经到来。</p>
-<p>无尽的知识和信息沿着互联网席卷着这个世界，未来有许多的可能展现在我们面前。</p>
-<p>这个世界终将一次次地颠覆我们的认知，改变我们的思考。</p>
-<p>这个有着无限可能的世界终将去往何处······</p>
+        <h2 id="&#x5341;&#x4E03;&#x5C81;&#x7EC8;&#x4E8E;&#x5411;&#x6211;&#x8D70;&#x6765;">&#x5341;&#x4E03;&#x5C81;&#x7EC8;&#x4E8E;&#x5411;&#x6211;&#x8D70;&#x6765;</h2>
+<p>Rainbow&#x603B;&#x89C9;&#x5F97;&#x5341;&#x4E03;&#x662F;&#x4E2A;&#x633A;&#x795E;&#x5947;&#x7684;&#x6570;&#x5B57;&#x3002;</p>
+<h2 id="&#x4E16;&#x754C;">&#x4E16;&#x754C;</h2>
+<p>&#x4E16;&#x754C;&#x5DF2;&#x7ECF;&#x4E00;&#x70B9;&#x70B9;&#x5728;&#x6211;&#x4EEC;&#x9762;&#x524D;&#x5C55;&#x5F00;&#xFF0C;&#x5145;&#x6EE1;&#x6D3B;&#x529B;&#x4E0E;&#x751F;&#x6C14;&#x7684;&#x65F6;&#x4EE3;&#x5DF2;&#x7ECF;&#x5230;&#x6765;&#x3002;</p>
+<p>&#x65E0;&#x5C3D;&#x7684;&#x77E5;&#x8BC6;&#x548C;&#x4FE1;&#x606F;&#x6CBF;&#x7740;&#x4E92;&#x8054;&#x7F51;&#x5E2D;&#x5377;&#x7740;&#x8FD9;&#x4E2A;&#x4E16;&#x754C;&#xFF0C;&#x672A;&#x6765;&#x6709;&#x8BB8;&#x591A;&#x7684;&#x53EF;&#x80FD;&#x5C55;&#x73B0;&#x5728;&#x6211;&#x4EEC;&#x9762;&#x524D;&#x3002;</p>
+<p>&#x8FD9;&#x4E2A;&#x4E16;&#x754C;&#x7EC8;&#x5C06;&#x4E00;&#x6B21;&#x6B21;&#x5730;&#x98A0;&#x8986;&#x6211;&#x4EEC;&#x7684;&#x8BA4;&#x77E5;&#xFF0C;&#x6539;&#x53D8;&#x6211;&#x4EEC;&#x7684;&#x601D;&#x8003;&#x3002;</p>
+<p>&#x8FD9;&#x4E2A;&#x6709;&#x7740;&#x65E0;&#x9650;&#x53EF;&#x80FD;&#x7684;&#x4E16;&#x754C;&#x7EC8;&#x5C06;&#x53BB;&#x5F80;&#x4F55;&#x5904;&#xB7;&#xB7;&#xB7;&#xB7;&#xB7;&#xB7;</p>
 
       
     </div>
@@ -530,13 +320,13 @@ ssl_certificate_key	/root/.acme.sh/[your-domain]/[your-domain].key;</p>
 
   
     
-    <h3 class="article-title"><a href="/post/2017/5/Thinking-of-Gaokao-Reforming.html"><span>高考改革漫想</span></a></h3>
+    <h3 class="article-title"><a href="/post/2017/05/Thinking-of-Gaokao-Reforming.html"><span>高考改革漫想</span></a></h3>
     
   
 
   <div class="article-top-meta">
     <span class="posted-on">
-      <a href="/post/2017/5/Thinking-of-Gaokao-Reforming.html" rel="bookmark">
+      <a href="/post/2017/05/Thinking-of-Gaokao-Reforming.html" rel="bookmark">
         <time class="entry-date published" datetime="2017-05-29T05:46:00.000Z">
           2017-05-29
         </time>
@@ -550,23 +340,12 @@ ssl_certificate_key	/root/.acme.sh/[your-domain]/[your-domain].key;</p>
   <div class="article-content">
     <div class="entry">
       
-        <h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2>
-<p>这篇文章是Rainbow在学校让所有人都参加作文比赛的时候在学校一口气写出来的。<br />
-一不小心写完了作文纸全部的格子。</p>
+        <h2 id="前言">前言</h2>
+<p>这篇文章是Rainbow在学校让所有人都参加作文比赛的时候在学校一口气写出来的。 一不小心写完了作文纸全部的格子。</p>
 <p>到现在也有一段时间了，但Rainbow决定不做大的更改(改一些语文方面的小问题)，直接打出来。</p>
-<h2 id="正文"><a class="markdownIt-Anchor" href="#正文"></a> 正文</h2>
-<p>关于浙江的高考改革，在我身边和网上也有着无数人在议论纷纷。我身边的老师似乎大多都是消极和反对的态度，吐槽这不好，吐槽那不好，觉得这有很多的投机取巧，田忌赛马的成分；当然也有少部分老师对新高考改革表示赞同，觉得改革也需要有时间去修改其中不好的地方。</p>
-<p>但其实那所在乎的唯一目标就是考上更好的大学罢了。似乎那三年紧紧地围绕着的只是上大学，不是别的。曾有老师说过，只要你苦了这三年，熬了下来，上了一个好的大学，就辛福了，轻松了。</p>
-<p>假如一个人辛苦地读了三年高中，掌握了丰富的各种各样的“知识”——解题技巧，那应该是能考一个较好的大学了。然后呢？就不辛苦了？上大学不应该只是为了那一张毕业证书，而是为了更多的知识，这种日子又谈何轻松。</p>
-<p>有高中老师曾抱怨初中只教中考要考的，却不花时间去教虽然不考但是真正也有用的知识。但现在不也还是有很多老师喜欢严格看着考纲，不考的牢记于心，并和同学们说这高考不要求，便匆匆略过，犹如蜻蜓点水，也或毫不提及，只因高考不考或是多年没考而积累出来的所谓经验。</p>
-<p>这次高考改革，浙江首创将技术纳入选考范围，实行“七选三”，但这项原来在“考大学”中学里不被重视的技术被纳入高考，起初也是让我激动一下，但随即我也觉得也仍有不少问题。</p>
-<p>众所周知，技术分为通用技术和信息技术，但其实这两门课关系并不很大，之所以将其合起来，我想大概是这两门课在众人心目中，分量还是不够重吧！通用技术主要涉及动手和设计方面，而信息技术，便是与当今的互联网是息息相关的，而其中涉及到了计算机编程，这便是让我激动的原因。</p>
-<p>在我初中的时候，我便遇见了我的第一门编程语言——Java。我当时便被其吸引了，而开始了在网上的自学。虽然说学习的时候，前后断断续续，但是我一直都没有放弃，一直到现在。而它也花了我许许多多的时间，但我也从来没有为此而感到后悔过，因为我觉得我的时间花的是有意义的，有价值的，尽管我也并不觉得我已是小有所成，或许也只是刚刚入门，但毕竟路还长着。</p>
-<p>信息技术这门课里的编程语言用的是VisualBASIC，但让我感到惊讶地是他的版本竟然是1998年的。在如今这个入火箭班起飞的互联网时代，让我们学的居然是上个世纪版本的编程语言，其教材和语言的落后程度可想而知。IDE和报错机制的难用让我无语。</p>
-<p>有一次，老师竟然翻出十几年前的资料，还开心地认为没有过时，可以继续用，而这一切之间的相对而言更是让我无语。与教材比，没有“过时”……</p>
-<p>听闻，信息教材将会更新一次，同时也会抛弃98年的VB，而是使用Python。还有会带来许多跟接近“现代”的知识，虽说这一切已与我无关，但我却更在乎于对于使用新教材之后，那些老师的态度。似乎反而带着抱怨和无奈，只是因为他们要重新学习，重新编出教学资源。也有人侥幸我们似乎逃过了这场大更新，但是这真的有意义吗？而这有让我迷惑于新旧教材交替之际，高二高三使用不一样的教材，而出现类似于2015年10月的那场前无高三，只有高二的大好投机机会，那到底要如何解决。</p>
-<p>授人以鱼不如授人以渔。接下来是一个信息爆炸的时代，每个人都应该有自己获取知识的欲望与能力，而不是牢记那所谓解题技巧。唯一的技巧便是能够不断学习的能力，这才是教育应该做到的。</p>
-
+        
+          <p><a class="excerpt-btn" href="post/2017/05/Thinking-of-Gaokao-Reforming.html"><span>...More</span></a></p>
+        
       
     </div>
 
@@ -605,13 +384,13 @@ ssl_certificate_key	/root/.acme.sh/[your-domain]/[your-domain].key;</p>
 
   
     
-    <h3 class="article-title"><a href="/post/2017/3/Open-Blog.html"><span>开博客的想法</span></a></h3>
+    <h3 class="article-title"><a href="/post/2017/03/Open-Blog.html"><span>开博客的想法</span></a></h3>
     
   
 
   <div class="article-top-meta">
     <span class="posted-on">
-      <a href="/post/2017/3/Open-Blog.html" rel="bookmark">
+      <a href="/post/2017/03/Open-Blog.html" rel="bookmark">
         <time class="entry-date published" datetime="2017-03-12T04:38:00.000Z">
           2017-03-12
         </time>
@@ -625,30 +404,11 @@ ssl_certificate_key	/root/.acme.sh/[your-domain]/[your-domain].key;</p>
   <div class="article-content">
     <div class="entry">
       
-        <h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2>
+        <h2 id="前言">前言</h2>
 <p>其实很早之前便想开一个自己的博客。</p>
-<p>在去年的暑假，我就迫不及待的买下了这个域名<a href="https://RainbowYang.moe/" target="_blank" rel="noopener" title="现在换成RainbowYang.moe了">（Rainbow-Yang.moe）</a>，但是并没有买个vps(然后这个域名就一直放在那里了)，直到最近才把这个建博客的事给完成了。</p>
-<p>这个博客用的是<a href="https://hexo.io/zh-cn/" target="_blank" rel="noopener">Hexo</a>，不得不说这个玩意还是比较方便的。几个简单的指令就能完成许多的事情(渲染，部署，还有在本地建一个服务器)。</p>
-<p>但是还是没有服务器，那这个又有什么用?那么这货就来了，有了<a href="https://pages.github.com/" target="_blank" rel="noopener">Github Pages</a>我们可以直接在本地用Hexo生成文件，然后部署到github上。</p>
-<p>开博客的事一拖再拖，到现在总算是完成了。但这其实更是一个开始，一个全新的开始。</p>
-<h2 id="正文"><a class="markdownIt-Anchor" href="#正文"></a> 正文</h2>
-<p>那么开这个博客的想法到底是什么呢？</p>
-<p>我自己觉得是有这么几个目的：</p>
-<h3 id="1克服对于写作的一些消极心理"><a class="markdownIt-Anchor" href="#1克服对于写作的一些消极心理"></a> 1.克服对于写作的一些消极心理</h3>
-<p>其实我一直以来都不太乐于写作，甚至还有些害怕，最讨厌的是莫过于写那些被固定了的作文，感觉没有什么好写。所以久而久之对于写作也便产生了一种不好的感觉。</p>
-<p>而开起这个博客，能让我写一些我想写的东西，这或许会让我逐渐地摆脱这种心理(希望能这样，鬼知道我以后会写多久)。</p>
-<h3 id="2作为对于我学习编程的记录"><a class="markdownIt-Anchor" href="#2作为对于我学习编程的记录"></a> 2.作为对于我学习(编程)的记录</h3>
-<p>从初中开始接触了Java，然后和身边的一些人一起开始自学。一直到现在的高中，虽说断断续续，我可以说还是一直坚持了下来，但是也有一些人弃坑而去了(本来就没几个人)。</p>
-<p>现在还在一起学的(其实这也谈不上一起学，主要都是自己在网上学，平时交流还比较多的)的似乎也就只剩这货——<a href="https://gogo.moe/" target="_blank" rel="noopener" title="这是博客">Gogo</a>了.</p>
-<p>我平时在网上看到一些东西想要记录下来，但却又总是无动于衷，那么在这里我可能放一些学习的记录吧。主要可能会是编程之类的，但也有可能是其他的。</p>
-<h3 id="3对我自己学习的一种激励"><a class="markdownIt-Anchor" href="#3对我自己学习的一种激励"></a> 3.对我自己学习的一种激励</h3>
-<p>我现在主要在用的主要还是Java，在下一个貌似就是JavaScript了。</p>
-<p>对Java而言，我还在写一个软件——<a href="https://github.com/RainbowYang/FunctionPainter" target="_blank" rel="noopener" title="给个GitHub的链接">FunctionPainter</a>，已传到GitHub。这个东西的主要功能顾名思义也就是一个可以生成函数图像的画板，之后会专门写一个博文来记录<del>吧<del> 。</del></del></p>
-<p>而JavaScript，我却暂时找不到什么东西可做，所以也想通过博客来加大对于这方面的接触，来让自己进一步的去学习这方面，也是作为一种动力。</p>
-<h2 id="尾"><a class="markdownIt-Anchor" href="#尾"></a> 尾</h2>
-<p>总算写完了我的第一篇博文，也不知会有谁会来到这个不知名的地方，看到这里。而我又会收获到什么。</p>
-<p>但这都不重要，一切从这开始。</p>
-
+        
+          <p><a class="excerpt-btn" href="post/2017/03/Open-Blog.html"><span>...More</span></a></p>
+        
       
     </div>
 

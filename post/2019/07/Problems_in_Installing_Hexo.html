@@ -3,14 +3,15 @@
 <head>
   <meta charset="utf-8">
   
-  <title>关于Hexo安装中的一些问题和方法 | 离梦之殇 | 如梦之境</title>
+  <title>关于Hexo安装中的一些问题和方法 | 离梦之殇 如梦之境 | To See Outer. To See Inner.</title>
 
   
   <meta name="author" content="Rainbow Yang">
   
 
   
-  <meta name="description" content="To See Outer.To See Inner.">
+  <meta name="description" content="&amp;#x6267;&amp;#x884C;npm install hexo-cli -g&amp;#x540E;&amp;#x65E0;&amp;#x53CD;&amp;#x5E94;
+&amp;#x89E3;&amp;#x51B3;&amp;#x65B9;&amp;#x6CD5;&amp;#x662F;&amp;#x8981;&amp;#x628A;npm&amp;#x7684;&amp;#x4ED3;&amp;#">
   
 
   
@@ -24,14 +25,14 @@
 
   <meta property="og:title" content="关于Hexo安装中的一些问题和方法"/>
 
-  <meta property="og:site_name" content="离梦之殇"/>
+  <meta property="og:site_name" content="离梦之殇 如梦之境"/>
 
   
   <meta property="og:image" content="/favicon.ico"/>
   
 
   <link href="/favicon.ico" rel="icon">
-  <link rel="alternate" href="/atom.xml" title="离梦之殇" type="application/atom+xml">
+  <link rel="alternate" href="/atom.xml" title="离梦之殇 如梦之境" type="application/atom+xml">
   <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
 <meta name="generator" content="Hexo 4.2.1"></head>
 
@@ -43,9 +44,9 @@
     <header>
   <div class="site-branding">
     <h1 class="site-title">
-      <a href="/">离梦之殇</a>
+      <a href="/">离梦之殇 如梦之境</a>
     </h1>
-    <p class="site-description">如梦之境</p>
+    <p class="site-description">To See Outer. To See Inner.</p>
   </div>
   <nav class="site-navigation">
     <ul>
@@ -75,7 +76,7 @@
 
   <div class="article-top-meta">
     <span class="posted-on">
-      <a href="/post/2019/7/Problems_in_Installing_Hexo.html" rel="bookmark">
+      <a href="/post/2019/07/Problems_in_Installing_Hexo.html" rel="bookmark">
         <time class="entry-date published" datetime="2019-07-01T10:11:14.000Z">
           2019-07-01
         </time>
@@ -89,21 +90,21 @@
   <div class="article-content">
     <div class="entry">
       
-        <h2 id="执行npm-install-hexo-cli-g后无反应"><a class="markdownIt-Anchor" href="#执行npm-install-hexo-cli-g后无反应"></a> 执行<code>npm install hexo-cli -g</code>后无反应</h2>
-<p>解决方法是要把npm的仓库源换成国内的。</p>
-<p>命令如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm config set registry https:&#x2F;&#x2F;registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
-<h2 id="在hexo中使用katex的方法"><a class="markdownIt-Anchor" href="#在hexo中使用katex的方法"></a> 在Hexo中使用KaTeX的方法</h2>
-<p>目前看下来最好的方法是使用<a href="https://github.com/thcd/hexo-katex" target="_blank" rel="noopener">hexo-katex</a>以及hexo-renderer-pandoc</p>
-<p>操作如下：</p>
+        <h2 id="&#x6267;&#x884C;npm-install-hexo-cli--g&#x540E;&#x65E0;&#x53CD;&#x5E94;">&#x6267;&#x884C;<code>npm install hexo-cli -g</code>&#x540E;&#x65E0;&#x53CD;&#x5E94;</h2>
+<p>&#x89E3;&#x51B3;&#x65B9;&#x6CD5;&#x662F;&#x8981;&#x628A;npm&#x7684;&#x4ED3;&#x5E93;&#x6E90;&#x6362;&#x6210;&#x56FD;&#x5185;&#x7684;&#x3002;</p>
+<p>&#x547D;&#x4EE4;&#x5982;&#x4E0B;&#xFF1A;</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm config set registry https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
+<h2 id="&#x5728;hexo&#x4E2D;&#x4F7F;&#x7528;katex&#x7684;&#x65B9;&#x6CD5;">&#x5728;Hexo&#x4E2D;&#x4F7F;&#x7528;KaTeX&#x7684;&#x65B9;&#x6CD5;</h2>
+<p>&#x76EE;&#x524D;&#x770B;&#x4E0B;&#x6765;&#x6700;&#x597D;&#x7684;&#x65B9;&#x6CD5;&#x662F;&#x4F7F;&#x7528;<a href="https://github.com/thcd/hexo-katex" target="_blank" rel="noopener">hexo-katex</a>&#x4EE5;&#x53CA;hexo-renderer-pandoc</p>
+<p>&#x64CD;&#x4F5C;&#x5982;&#x4E0B;&#xFF1A;</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">npm uninstall hexo-renderer-marked --save</span><br><span class="line">npm install hexo-renderer-pandoc --save</span><br><span class="line"></span><br><span class="line">npm install hexo-katex --save</span><br></pre></td></tr></table></figure>
-<p>并在<code>_config.yml</code>中加入</p>
+<p>&#x5E76;&#x5728;<code>_config.yml</code>&#x4E2D;&#x52A0;&#x5165;</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pandoc:</span><br><span class="line">  mathEngine: katex</span><br></pre></td></tr></table></figure>
-<p>参考<a href="https://blog.masellum.me/2018/10/Hexo-Math-Katex/" target="_blank" rel="noopener">《为 Hexo 更换数学渲染引擎为 KaTeX》</a></p>
-<h2 id="用hexo-abbrlink为博文绑定disqushexo主题-journal"><a class="markdownIt-Anchor" href="#用hexo-abbrlink为博文绑定disqushexo主题-journal"></a> 用hexo-abbrlink为博文绑定Disqus（Hexo主题 Journal）</h2>
-<p>先安装<a href="https://github.com/rozbo/hexo-abbrlink" target="_blank" rel="noopener">hexo-abbrlink</a>.</p>
-<p>然后将<code>\themes\journal\layout\_include\comment_includes.ejs</code>进行修改</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var disqus_config &#x3D; function () &#123;</span><br><span class="line">        this.page.url &#x3D; &#39;&lt;%&#x3D; config.url + config.root + page.path %&gt;&#39;;</span><br><span class="line">        this.page.identifier &#x3D; &#39;&lt;%&#x3D; page.abbrlink %&gt;&#39;; </span><br><span class="line">        &#x2F;&#x2F;&#39;&lt;%&#x3D; config.root + page.path %&gt;&#39;;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>&#x53C2;&#x8003;<a href="https://blog.masellum.me/2018/10/Hexo-Math-Katex/" target="_blank" rel="noopener">&#x300A;&#x4E3A; Hexo &#x66F4;&#x6362;&#x6570;&#x5B66;&#x6E32;&#x67D3;&#x5F15;&#x64CE;&#x4E3A; KaTeX&#x300B;</a></p>
+<h2 id="&#x7528;hexo-abbrlink&#x4E3A;&#x535A;&#x6587;&#x7ED1;&#x5B9A;disqushexo&#x4E3B;&#x9898;-journal">&#x7528;hexo-abbrlink&#x4E3A;&#x535A;&#x6587;&#x7ED1;&#x5B9A;Disqus&#xFF08;Hexo&#x4E3B;&#x9898; Journal&#xFF09;</h2>
+<p>&#x5148;&#x5B89;&#x88C5;<a href="https://github.com/rozbo/hexo-abbrlink" target="_blank" rel="noopener">hexo-abbrlink</a>.</p>
+<p>&#x7136;&#x540E;&#x5C06;<code>\themes\journal\layout\_include\comment_includes.ejs</code>&#x8FDB;&#x884C;&#x4FEE;&#x6539;</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var disqus_config = function () {</span><br><span class="line">        this.page.url = &apos;&lt;%= config.url + config.root + page.path %&gt;&apos;;</span><br><span class="line">        this.page.identifier = &apos;&lt;%= page.abbrlink %&gt;&apos;; </span><br><span class="line">        //&apos;&lt;%= config.root + page.path %&gt;&apos;;</span><br><span class="line">};</span><br></pre></td></tr></table></figure>
 
       
     </div>
