@@ -1,0 +1,646 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Writeup of Hgame 2019 Week1 | 离梦之殇 | 如梦之境</title>
+
+  
+  <meta name="author" content="Rainbow Yang">
+  
+
+  
+  <meta name="description" content="To See Outer.To See Inner.">
+  
+
+  
+  
+  <meta name="keywords" content="WriteUp">
+  
+
+  <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+  <meta property="og:title" content="Writeup of Hgame 2019 Week1"/>
+
+  <meta property="og:site_name" content="离梦之殇"/>
+
+  
+  <meta property="og:image" content="/favicon.ico"/>
+  
+
+  <link href="/favicon.ico" rel="icon">
+  <link rel="alternate" href="/atom.xml" title="离梦之殇" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+
+<body>
+<div class="blog">
+  <div class="content">
+
+    <header>
+  <div class="site-branding">
+    <h1 class="site-title">
+      <a href="/">离梦之殇</a>
+    </h1>
+    <p class="site-description">如梦之境</p>
+  </div>
+  <nav class="site-navigation">
+    <ul>
+      
+        <li><a href="/">Home</a></li>
+      
+        <li><a href="/archives">Archives</a></li>
+      
+        <li><a href="/about">About</a></li>
+      
+        <li><a href="/links">Links</a></li>
+      
+        <li><a href="/atom.xml">RSS</a></li>
+      
+    </ul>
+  </nav>
+</header>
+
+    <main class="site-main posts-loop">
+    <article>
+
+  
+    
+    <h3 class="article-title"><span>Writeup of Hgame 2019 Week1</span></h3>
+    
+  
+
+  <div class="article-top-meta">
+    <span class="posted-on">
+      <a href="/post/2019/2/Hgame-2019-Writeup-Week1.html" rel="bookmark">
+        <time class="entry-date published" datetime="2019-02-16T06:05:54.000Z">
+          2019-02-16
+        </time>
+      </a>
+    </span>
+  </div>
+
+
+  
+
+  <div class="article-content">
+    <div class="entry">
+      
+        <h2 id="i-web"><a class="markdownIt-Anchor" href="#i-web"></a> Ⅰ WEB</h2>
+<h3 id="1-谁吃了我的flag"><a class="markdownIt-Anchor" href="#1-谁吃了我的flag"></a> 1. 谁吃了我的flag</h3>
+<h4 id="question"><a class="markdownIt-Anchor" href="#question"></a> Question</h4>
+<p>Description</p>
+<p>呜呜呜，Mki一起床发现写好的题目变成这样了，是因为昨天没有好好关机吗T_T hint: 据当事人回忆，那个夜晚他正在用vim编写题目页面，似乎没有保存就关机睡觉去了,现在就是后悔，十分的后悔。</p>
+<p>URL</p>
+<p><a href="http://118.25.111.31:10086/index.html" target="_blank" rel="noopener">http://118.25.111.31:10086/index.html</a></p>
+<p>Base Score</p>
+<p>50</p>
+<h4 id="answer"><a class="markdownIt-Anchor" href="#answer"></a> Answer</h4>
+<p>由于Description可知，是vim没有保存。</p>
+<p>所以拿到<a href="http://118.25.111.31:10086/.index.html.swp" target="_blank" rel="noopener">http://118.25.111.31:10086/.index.html.swp</a>文件，</p>
+<p>然后用vim打开，Recover即得：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">HTML</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">title</span>&gt;</span>谁吃了我的flag???<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>damn...hgame2019 is coming soon, but the stupid Mki haven't finished his web-challenge...<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">br</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>fine, nothing serious, just give you flag this time...<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">br</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>the flag is hgame&#123;3eek_diScl0Sure_fRom+wEbsit@&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>所以flag就是<code>hgame{3eek_diScl0Sure_fRom+wEbsit@}</code></p>
+<h3 id="2-换头大作战"><a class="markdownIt-Anchor" href="#2-换头大作战"></a> 2. 换头大作战</h3>
+<h4 id="question-2"><a class="markdownIt-Anchor" href="#question-2"></a> Question</h4>
+<p>Description</p>
+<p>想要flag嘛 工具: burpsuite postman hackbar 怎么用去百度，相信你可以的</p>
+<p>URL</p>
+<p><a href="http://120.78.184.111:8080/week1/how/index.php" target="_blank" rel="noopener">http://120.78.184.111:8080/week1/how/index.php</a></p>
+<p>Base Score</p>
+<p>100</p>
+<h4 id="answer-2"><a class="markdownIt-Anchor" href="#answer-2"></a> Answer</h4>
+<p>进入网页后点了一下submit之后，出现了</p>
+<blockquote>
+<p>request method is error.I think POST is better</p>
+</blockquote>
+<p>所以就用Postman进行POST咯。（然后还要添加一个字段want。。。</p>
+<hr />
+<p>然后最后多了两行</p>
+<blockquote>
+<p><a href="https://www.wikiwand.com/en/X-Forwarded-For" target="_blank" rel="noopener">https://www.wikiwand.com/en/X-Forwarded-For</a></p>
+<p>only localhost can get flag</p>
+</blockquote>
+<p>那么显然这个就和<code>X-Forwarded-For</code>有关了，又看到<code>only localhost can get flag</code>.</p>
+<p>所以在header请求里加上<code>X-Forwarded-For: 127.0.0.1</code></p>
+<hr />
+<p>最后两行又变成了</p>
+<blockquote>
+<p><a href="https://www.wikiwand.com/en/User_agent" target="_blank" rel="noopener">https://www.wikiwand.com/en/User_agent</a></p>
+<p>please use Waterfox/50.0</p>
+</blockquote>
+<p>所以就是加上<code>User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; rv:57.0) Gecko/20100101 Waterfox/50.0</code></p>
+<hr />
+<p>又变成了</p>
+<blockquote>
+<p><a href="https://www.wikiwand.com/en/HTTP_referer" target="_blank" rel="noopener">https://www.wikiwand.com/en/HTTP_referer</a></p>
+<p>the requests should referer from <a href="http://www.bilibili.com" target="_blank" rel="noopener">www.bilibili.com</a></p>
+</blockquote>
+<p>那就再加上<code>Referer: www.bilibili.com</code></p>
+<hr />
+<p>下一个。。。</p>
+<blockquote>
+<p><a href="https://www.wikiwand.com/en/HTTP_cookie" target="_blank" rel="noopener">https://www.wikiwand.com/en/HTTP_cookie</a></p>
+<p>you are not admin</p>
+</blockquote>
+<p>看来是cookie了呀。</p>
+<p>怎么弄啊。。</p>
+<p>然后就加了个<code>Cookie: not admin</code></p>
+<p>（我也不知道为什么这脑洞这么。。。</p>
+<p>结果出来了<code>hgame{hTTp_HeaDeR_iS_Ez}</code></p>
+<h3 id="3-very-easy-web"><a class="markdownIt-Anchor" href="#3-very-easy-web"></a> 3. very easy web</h3>
+<h4 id="question-3"><a class="markdownIt-Anchor" href="#question-3"></a> Question</h4>
+<p>Description</p>
+<p>代码审计初♂体验</p>
+<p>URL</p>
+<p><a href="http://120.78.184.111:8080/week1/very_ez/index.php" target="_blank" rel="noopener">http://120.78.184.111:8080/week1/very_ez/index.php</a></p>
+<p>Base Score</p>
+<p>100</p>
+<h4 id="answer-3"><a class="markdownIt-Anchor" href="#answer-3"></a> Answer</h4>
+<p>打开拿到了php源码:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">error_reporting(0);</span><br><span class="line">include(&quot;flag.php&quot;);</span><br><span class="line"></span><br><span class="line">if(strpos(&quot;vidar&quot;,$_GET[&#39;id&#39;])!&#x3D;&#x3D;FALSE)</span><br><span class="line">  die(&quot;&lt;p&gt;干巴爹&lt;&#x2F;p&gt;&quot;);</span><br><span class="line"></span><br><span class="line">$_GET[&#39;id&#39;] &#x3D; urldecode($_GET[&#39;id&#39;]);</span><br><span class="line">if($_GET[&#39;id&#39;] &#x3D;&#x3D;&#x3D; &quot;vidar&quot;)</span><br><span class="line">&#123;</span><br><span class="line">  echo $flag;</span><br><span class="line">&#125;</span><br><span class="line">highlight_file(__FILE__);</span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
+<p>看来想要拿到flag，只要执行到<code>echo $flag;</code>，问题就解决了。</p>
+<p>所以只要输入一个构造好的id就可以了。</p>
+<p>问题是这个id他既不是<code>&quot;vidar&quot;</code>,又要进行<code>urldecode</code>后表示是<code>&quot;vidar&quot;</code>。</p>
+<p>对于<code>&quot;vidar&quot;</code>而言，进行<code>urlencode</code>，其实就是十六进制的ASCII码，所以就是<code>%76%69%64%61%72</code>。</p>
+<p>可是在输入到php时会自动进行一次<code>urldecode</code>,这样的话id拿到的其实还是<code>vidar</code>，</p>
+<p>所以对<code>%76%69%64%61%72</code>在进行一次<code>urlencode</code>，得到</p>
+<p><code>%25%37%36%25%36%39%25%36%34%25%36%31%25%37%32</code></p>
+<p>然后访问<a href="http://120.78.184.111:8080/week1/very_ez/index.php?id=%25%37%36%25%36%39%25%36%34%25%36%31%25%37%32" target="_blank" rel="noopener">http://120.78.184.111:8080/week1/very_ez/index.php?id=%76%69%64%61%72</a>，得到flag为<code>hgame{urlDecode_Is_GoOd}</code></p>
+<h3 id="4-can-u-find-me"><a class="markdownIt-Anchor" href="#4-can-u-find-me"></a> 4. can u find me?</h3>
+<h4 id="question-4"><a class="markdownIt-Anchor" href="#question-4"></a> Question</h4>
+<p>Description</p>
+<p>为什么不问问神奇的十二姑娘和她的小伙伴呢</p>
+<p>学习资料:</p>
+<p><a href="https://www.cnblogs.com/yaoyaojing/p/9530728.html" target="_blank" rel="noopener">https://www.cnblogs.com/yaoyaojing/p/9530728.html</a><br><br />
+<a href="https://www.cnblogs.com/logsharing/p/8448446.html" target="_blank" rel="noopener">https://www.cnblogs.com/logsharing/p/8448446.html</a><br><br />
+<a href="https://blog.csdn.net/z929118967/article/details/50384529" target="_blank" rel="noopener">https://blog.csdn.net/z929118967/article/details/50384529</a></p>
+<p>URL</p>
+<p><a href="http://47.107.252.171:8080/" target="_blank" rel="noopener">http://47.107.252.171:8080/</a></p>
+<p>Base Score</p>
+<p>100</p>
+<h4 id="answer-4"><a class="markdownIt-Anchor" href="#answer-4"></a> Answer</h4>
+<p>打开网页，看到</p>
+<blockquote>
+<p>the gate has been hidden</p>
+<p>can you find it? xixixi</p>
+</blockquote>
+<p>(等于没说。。。</p>
+<hr />
+<p>然后一把打开F12，看到body里面藏着个<code>&lt;a href=&quot;f12.php&quot;&gt;&lt;/a&gt;</code>.</p>
+<p>遂打开<a href="http://47.107.252.171:8080/f12.php" target="_blank" rel="noopener">http://47.107.252.171:8080/f12.php</a>，结果看到</p>
+<blockquote>
+<p>yeah!you find the gate</p>
+<p>but can you find the password?</p>
+<p>please post password to me! I will open the gate for you!</p>
+</blockquote>
+<hr />
+<p>找了一下，发现了<code>Response Headers</code>里面的东东</p>
+<blockquote>
+<p>HTTP/1.1 200 OK<br />
+Server: nginx/1.15.8<br />
+Date: Sun, 27 Jan 2019 14:01:33 GMT<br />
+Content-Type: text/html; charset=UTF-8<br />
+Transfer-Encoding: chunked<br />
+Connection: keep-alive<br />
+X-Powered-By: PHP/7.2.14<br />
+<strong>password: woyaoflag</strong></p>
+</blockquote>
+<p>所以<code>password</code>就是<code>woyaoflag</code></p>
+<hr />
+<p>然后POST这个密码过去，网页变成了</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">title</span>&gt;</span>can u find me?<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>yeah!you find the gate<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>but can you find the password?<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>please post password to me! I will open the gate for you!<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>right!<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">'iamflag.php'</span>&gt;</span> click me to get flag<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>然后打开<code>iamflag.php</code>，结果这是个302，然后跳转到<code>toofast.php</code>,显示了</p>
+<blockquote>
+<p>aoh,your speed is sososo fast,the flag must have been left in somewhere</p>
+</blockquote>
+<p>显然真正的flag应该就藏在那个被跳过的<code>iamflag.php</code>里面。</p>
+<p>然后用Burp Suite抓包，再发到Repeater里，重发一遍，拿到iamflag.php的Response</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">HTTP/1.1 302 Found</span><br><span class="line">Server: nginx/1.15.8</span><br><span class="line">Date: Mon, 28 Jan 2019 04:55:02 GMT</span><br><span class="line">Content-Type: text/html; charset=UTF-8</span><br><span class="line">Connection: close</span><br><span class="line">X-Powered-By: PHP/7.2.14</span><br><span class="line">location: toofast.php</span><br><span class="line">Content-Length: 132</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">  	<span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">title</span>&gt;</span>can you find me?<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">p</span>&gt;</span>flag:hgame&#123;f12_1s_aMazIng111&#125;<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>那么flag就是<code>hgame{f12_1s_aMazIng111}</code></p>
+<h2 id="ii-re"><a class="markdownIt-Anchor" href="#ii-re"></a> Ⅱ RE</h2>
+<h3 id="1-brainfxxker"><a class="markdownIt-Anchor" href="#1-brainfxxker"></a> 1. brainfxxker</h3>
+<h4 id="question-5"><a class="markdownIt-Anchor" href="#question-5"></a> Question</h4>
+<p>Description</p>
+<p>Ouch! What is this? I don’t think that I am pretty good at C++, what a brain fxxker it is!<br />
+学习资料:<br />
+<a href="https://zh.wikipedia.org/wiki/Brainfuck" target="_blank" rel="noopener">https://zh.wikipedia.org/wiki/Brainfuck</a><br />
+<a href="https://zh.wikipedia.org/zh/ASCII" target="_blank" rel="noopener">https://zh.wikipedia.org/zh/ASCII</a><br />
+读懂我的代码逻辑答案就出来了<br />
+补充说明:<br />
+判定答案是否正确的是 Notice 2，即“不执行 [+.] 这个部分”，不要单纯看有没有输出 orz</p>
+<p>URL</p>
+<p><a href="http://plir4axuz.bkt.clouddn.com/hgame2019/brainfucker.cpp" target="_blank" rel="noopener">http://plir4axuz.bkt.clouddn.com/hgame2019/brainfucker.cpp</a></p>
+<p>Base Score</p>
+<p>100</p>
+<h4 id="answer-5"><a class="markdownIt-Anchor" href="#answer-5"></a> Answer</h4>
+<p>得到源码如下</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cctype&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Orz... I haven't learnt C++ before.</span></span><br><span class="line"><span class="comment">// It seems like my brain was fxxked by these codes...</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Notice:</span></span><br><span class="line"><span class="comment">// 1. the answer is your input when nothing strange was printed</span></span><br><span class="line"><span class="comment">// 2. that is, wrong inputs will encounter with the part "[+.]"</span></span><br><span class="line"><span class="comment">// 3. [!!!] REMEMBER TO WRAP YOUR ANSWER WITH "hgame&#123;" AND "&#125;"</span></span><br><span class="line"><span class="comment">//    [!!!] BEFORE YOU SUBMITTED IT</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// oyiadin, Jan 18, 2019</span></span><br><span class="line"><span class="comment">// enjoy it! ;)</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> bf &#123;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Parser</span> &#123;</span></span><br><span class="line"> <span class="keyword">public</span>:</span><br><span class="line">  Parser() = <span class="keyword">default</span>;</span><br><span class="line">  ~Parser() = <span class="keyword">default</span>;</span><br><span class="line">  <span class="function"><span class="keyword">void</span> <span class="title">execute</span><span class="params">(<span class="keyword">const</span> <span class="built_in">std</span>::<span class="built_in">string</span> &amp;buf)</span></span>;</span><br><span class="line"></span><br><span class="line"> <span class="keyword">protected</span>:</span><br><span class="line">  <span class="keyword">uint8_t</span> data[<span class="number">100</span>] = &#123;<span class="number">0</span>&#125;;</span><br><span class="line">  <span class="keyword">int</span> ptr = <span class="number">0</span>;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Parser::execute</span><span class="params">(<span class="keyword">const</span> <span class="built_in">std</span>::<span class="built_in">string</span> &amp;buf)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">auto</span> i = buf.cbegin(); i != buf.cend(); ++i) &#123;</span><br><span class="line">    <span class="keyword">switch</span> (*i) &#123;</span><br><span class="line">      <span class="keyword">case</span> <span class="string">'&gt;'</span>:</span><br><span class="line">        ++ptr;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">      <span class="keyword">case</span> <span class="string">'&lt;'</span>:</span><br><span class="line">        --ptr;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">      <span class="keyword">case</span> <span class="string">'+'</span>:</span><br><span class="line">        ++data[ptr];</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">      <span class="keyword">case</span> <span class="string">'-'</span>:</span><br><span class="line">        --data[ptr];</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">      <span class="keyword">case</span> <span class="string">'.'</span>:</span><br><span class="line">        <span class="built_in">putchar</span>(data[ptr]);</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">      <span class="keyword">case</span> <span class="string">','</span>:</span><br><span class="line">        <span class="keyword">while</span> ((data[ptr] = getchar()) == <span class="string">'\n'</span>) ;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">      <span class="keyword">case</span> <span class="string">'['</span>:</span><br><span class="line">        <span class="keyword">if</span> (!data[ptr]) &#123;</span><br><span class="line">          <span class="keyword">while</span> (*i++ != <span class="string">']'</span>) <span class="keyword">continue</span>;</span><br><span class="line">          --i;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">      <span class="keyword">case</span> <span class="string">']'</span>:</span><br><span class="line">        <span class="keyword">if</span> (data[ptr]) &#123;</span><br><span class="line">          <span class="keyword">while</span> (*(i<span class="number">-1</span>) != <span class="string">'['</span>) --i;</span><br><span class="line">          --i;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">      <span class="keyword">default</span>:</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  bf::Parser parser;</span><br><span class="line">  parser.execute(<span class="string">",&gt;++++++++++[&lt;----------&gt;-]&lt;++[+.],&gt;+++++++++[&lt;---------&gt;-]&lt;-[+.],&gt;+++++++[&lt;-------&gt;-]&lt;---[+.],&gt;++++++[&lt;------&gt;-]&lt;+++[+.],&gt;++++++++[&lt;----------&gt;-]&lt;++[+.],&gt;++++++++++[&lt;----------&gt;-]&lt;--[+.],&gt;++++++++++[&lt;--------&gt;-]&lt;-----[+.],&gt;++++++++++[&lt;----------&gt;-]&lt;+[+.],&gt;+++++++++[&lt;--------&gt;-]&lt;---[+.]"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>最后的这一串实际上就是一堆指令，其中<code>,</code>是输入，<code>.</code>是输出，<code>&lt;</code>和<code>&gt;</code>是左移和右移指针<code>ptr</code>，<code>+</code>和<code>-</code>就是数组里的<code>ptr</code>指着的那个值自增和自减。</p>
+<p>因为<code>,</code>是输入的意思，所以对于最后的字符串，其实应该分组成</p>
+<p><code>,&gt;++++++++++[&lt;----------&gt;-]&lt;++[+.]</code></p>
+<p><code>,&gt;+++++++++[&lt;---------&gt;-]&lt;-[+.]</code></p>
+<p><code>,&gt;+++++++[&lt;-------&gt;-]&lt;---[+.]</code></p>
+<p><code>,&gt;++++++[&lt;------&gt;-]&lt;+++[+.]</code></p>
+<p><code>,&gt;++++++++[&lt;----------&gt;-]&lt;++[+.]</code></p>
+<p><code>,&gt;++++++++++[&lt;----------&gt;-]&lt;--[+.]</code></p>
+<p><code>,&gt;++++++++++[&lt;--------&gt;-]&lt;-----[+.]</code></p>
+<p><code>,&gt;++++++++++[&lt;----------&gt;-]&lt;+[+.]</code></p>
+<p><code>,&gt;+++++++++[&lt;--------&gt;-]&lt;---[+.]</code></p>
+<p>要是最后不输出什么奇怪的值，就要让每一行执行到最后一个<code>[</code>的时候，<code>ptr</code>指着的值应该是0，因为只有这样才能跳过最后的<code>[+.]</code>。</p>
+<p>前面的一块操作，比如<code>&gt;++++++++++[&lt;----------&gt;-]</code>，其实就是一个循环，把输入的值减去<code>+</code>乘上后面连着的<code>-</code>的值。</p>
+<p>然后在后面还有一块有若干个<code>+</code>或<code>-</code>，就是在前面循环的基础上，进行加减。</p>
+<p>整理一下格式就是<code>,&gt;{a个+}[&lt;{b个-}&gt;-]&lt;{c个+}[+.]</code>.</p>
+<p>上面的<code>z个+</code>，如果是<code>-</code>号就等于<code>-z</code>。</p>
+<p>所以设输入的值的ASCII码值为X，则<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>X</mi><mo>−</mo><mi>a</mi><mi>b</mi><mo>+</mo><mi>z</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">X-ab+z=0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.76666em;vertical-align:-0.08333em;"></span><span class="mord mathdefault" style="margin-right:0.07847em;">X</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.77777em;vertical-align:-0.08333em;"></span><span class="mord mathdefault">a</span><span class="mord mathdefault">b</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.04398em;">z</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span>，所以<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>X</mi><mo>=</mo><mi>a</mi><mi>b</mi><mo>−</mo><mi>z</mi></mrow><annotation encoding="application/x-tex">X=ab-z</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.07847em;">X</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.77777em;vertical-align:-0.08333em;"></span><span class="mord mathdefault">a</span><span class="mord mathdefault">b</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.04398em;">z</span></span></span></span>.</p>
+<p>依次算出之后就是</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//    ",&gt;++++++++++[&lt;----------&gt;-]&lt;++[+.]" //98</span></span><br><span class="line"><span class="comment">//    ",&gt;+++++++++[&lt;---------&gt;-]&lt;-[+.]"    //82</span></span><br><span class="line"><span class="comment">//    ",&gt;+++++++[&lt;-------&gt;-]&lt;---[+.]"      //52</span></span><br><span class="line"><span class="comment">//    ",&gt;++++++[&lt;------&gt;-]&lt;+++[+.]"        //33</span></span><br><span class="line"><span class="comment">//    ",&gt;++++++++[&lt;----------&gt;-]&lt;++[+.]"   //78</span></span><br><span class="line"><span class="comment">//    ",&gt;++++++++++[&lt;----------&gt;-]&lt;--[+.]" //102</span></span><br><span class="line"><span class="comment">//    ",&gt;++++++++++[&lt;--------&gt;-]&lt;-----[+.]"//85</span></span><br><span class="line"><span class="comment">//    ",&gt;++++++++++[&lt;----------&gt;-]&lt;+[+.]"  //99</span></span><br><span class="line"><span class="comment">//    ",&gt;+++++++++[&lt;--------&gt;-]&lt;---[+.]"); //75</span></span><br></pre></td></tr></table></figure>
+<p>得到的数字，查ASCII表拼起来得到 bR4!NfUcK</p>
+<p>所以最后的flag就是<code>hgame{bR4!NfUcK}</code></p>
+<h3 id="2-hellore"><a class="markdownIt-Anchor" href="#2-hellore"></a> 2. HelloRe</h3>
+<h4 id="question-6"><a class="markdownIt-Anchor" href="#question-6"></a> Question</h4>
+<p>Description</p>
+<p>Welcoooooome!</p>
+<p>URL</p>
+<p><a href="http://plps4kyke.bkt.clouddn.com/HelloRe" target="_blank" rel="noopener">http://plps4kyke.bkt.clouddn.com/HelloRe</a></p>
+<p>Base Score</p>
+<p>50</p>
+<h4 id="answer-6"><a class="markdownIt-Anchor" href="#answer-6"></a> Answer</h4>
+<p>这个东西就是直接UE看就是了，flag就明文藏在里面。</p>
+<blockquote>
+<p>000007E0: 01 00 02 00 50 6C 65 61 73 65 20 69 6E 70 75 74    …Please.input</p>
+<p>000007F0: 20 79 6F 75 72 20 6B 65 79 3A 00 68 67 61 6D 65    .your.key:.hgame</p>
+<p>00000800: 7B 57 65 6C 63 30 6D 33 5F 74 30 5F 52 33 5F 57    {Welc0m3_t0_R3_W</p>
+<p>00000810: 6F 72 6C 64 21 7D 00 73 75 63 63 65 73 73 00 66    orld!}.success.f</p>
+<p>00000820: 61 69 6C 65 64 2E 2E 00 01 1B 03 3B 34 00 00 00    ailed…;4…</p>
+</blockquote>
+<p>所以flag就是<code>hgame{Welc0m3_t0_R3_World!}</code></p>
+<h3 id="3-わかります"><a class="markdownIt-Anchor" href="#3-わかります"></a> 3. わかります</h3>
+<h4 id="question-7"><a class="markdownIt-Anchor" href="#question-7"></a> Question</h4>
+<p>Description</p>
+<p>POSITION ZERO!</p>
+<p>URL</p>
+<p><a href="http://plps4kyke.bkt.clouddn.com/wakarimasu" target="_blank" rel="noopener">http://plps4kyke.bkt.clouddn.com/wakarimasu</a></p>
+<p>Base Score</p>
+<p>100</p>
+<h4 id="answer-7"><a class="markdownIt-Anchor" href="#answer-7"></a> Answer</h4>
+<p>一把进入IDA，然后找到main，再F5反编译成C语言</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">__int64 __fastcall <span class="title">main</span><span class="params">(__int64 a1, <span class="keyword">char</span> **a2, <span class="keyword">char</span> **a3)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="keyword">char</span> s; <span class="comment">// [rsp+0h] [rbp-40h]</span></span><br><span class="line">  <span class="keyword">unsigned</span> __int64 v5; <span class="comment">// [rsp+38h] [rbp-8h]</span></span><br><span class="line"></span><br><span class="line">  v5 = __readfsqword(<span class="number">0x28</span>u);</span><br><span class="line">  <span class="built_in">memset</span>(&amp;s, <span class="number">0</span>, <span class="number">0x30</span>uLL);</span><br><span class="line">  <span class="built_in">puts</span>(<span class="string">"You are a good Reverser!"</span>);</span><br><span class="line">  <span class="built_in">puts</span>(off_602250);</span><br><span class="line">  <span class="built_in">puts</span>(<span class="string">"wakalimasu.Give me your starlight!"</span>);</span><br><span class="line">  fgets(&amp;s, <span class="number">47</span>, <span class="built_in">stdin</span>);</span><br><span class="line">  <span class="keyword">if</span> ( (<span class="keyword">unsigned</span> __int8)sub_40094C(&amp;s) )</span><br><span class="line">    <span class="built_in">puts</span>(<span class="string">"you are top star!"</span>);</span><br><span class="line">  <span class="keyword">else</span></span><br><span class="line">    <span class="built_in">puts</span>(<span class="string">"non-non dayo~"</span>);</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0L</span>L;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>最后我们应该要让if里面的<code>(unsigned __int8)sub_40094C(&amp;s)</code>成立，所以看下<code>sub_40094C</code></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">__int64 __fastcall <span class="title">sub_40094C</span><span class="params">(<span class="keyword">const</span> <span class="keyword">char</span> *a1)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="keyword">unsigned</span> __int8 v2; <span class="comment">// [rsp+13h] [rbp-2Dh]</span></span><br><span class="line">  <span class="keyword">signed</span> <span class="keyword">int</span> i; <span class="comment">// [rsp+14h] [rbp-2Ch]</span></span><br><span class="line">  <span class="keyword">signed</span> <span class="keyword">int</span> j; <span class="comment">// [rsp+18h] [rbp-28h]</span></span><br><span class="line">  <span class="keyword">signed</span> <span class="keyword">int</span> v5; <span class="comment">// [rsp+1Ch] [rbp-24h]</span></span><br><span class="line">  _DWORD *ptr; <span class="comment">// [rsp+20h] [rbp-20h]</span></span><br><span class="line">  _DWORD *v7; <span class="comment">// [rsp+28h] [rbp-18h]</span></span><br><span class="line">  _DWORD *v8; <span class="comment">// [rsp+30h] [rbp-10h]</span></span><br><span class="line">  _DWORD *v9; <span class="comment">// [rsp+38h] [rbp-8h]</span></span><br><span class="line"></span><br><span class="line">  v2 = <span class="number">1</span>;</span><br><span class="line">  v5 = <span class="built_in">strlen</span>(a1);</span><br><span class="line">  <span class="keyword">if</span> ( v5 &gt; <span class="number">37</span> )</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0L</span>L;</span><br><span class="line">  ptr = sub_400736(<span class="number">36</span>);</span><br><span class="line">  v7 = sub_400736(<span class="number">36</span>);</span><br><span class="line">  <span class="keyword">for</span> ( i = <span class="number">0</span>; i &lt; v5; ++i )</span><br><span class="line">  &#123;</span><br><span class="line">    ptr[i] = (<span class="keyword">char</span>)(a1[i] &gt;&gt; <span class="number">4</span>);</span><br><span class="line">    v7[i] = a1[i] &amp; <span class="number">0xF</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  v8 = sub_40078E((__int64)ptr, (__int64)&amp;unk_602080, <span class="number">6</span>);</span><br><span class="line">  v9 = sub_400892((__int64)v7, (__int64)&amp;unk_602080, <span class="number">6</span>);</span><br><span class="line">  <span class="keyword">for</span> ( j = <span class="number">0</span>; j &lt;= <span class="number">35</span>; ++j )</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="keyword">if</span> ( v8[j] != dword_602120[j] || v9[j] != dword_6021C0[j] )</span><br><span class="line">      v2 = <span class="number">0</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="built_in">free</span>(ptr);</span><br><span class="line">  <span class="built_in">free</span>(v7);</span><br><span class="line">  <span class="built_in">free</span>(v8);</span><br><span class="line">  <span class="built_in">free</span>(v9);</span><br><span class="line">  <span class="keyword">return</span> v2;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>那么a1其实就是我们的输入，并且应该长度是36。</p>
+<p>然后的</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> ( i = <span class="number">0</span>; i &lt; v5; ++i )</span><br><span class="line">  &#123;</span><br><span class="line">    ptr[i] = (<span class="keyword">char</span>)(a1[i] &gt;&gt; <span class="number">4</span>);</span><br><span class="line">    v7[i] = a1[i] &amp; <span class="number">0xF</span>;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+<p>就相当于把我们的输入的每个字符的前四位和后四位分别存入<code>ptr</code>和<code>v7</code></p>
+<p>再接着的</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">v8 = sub_40078E((__int64)ptr, (__int64)&amp;unk_602080, <span class="number">6</span>);</span><br><span class="line">v9 = sub_400892((__int64)v7, (__int64)&amp;unk_602080, <span class="number">6</span>);</span><br></pre></td></tr></table></figure>
+<p>相当于把<code>ptr</code>和<code>v7</code>分别做了处理(这个接下来再说)，然后再赋值给v8和v9。</p>
+<p>最后的</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> ( j = <span class="number">0</span>; j &lt;= <span class="number">35</span>; ++j )</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="keyword">if</span> ( v8[j] != dword_602120[j] || v9[j] != dword_6021C0[j] )</span><br><span class="line">      v2 = <span class="number">0</span>;</span><br><span class="line">  &#125;</span><br><span class="line"><span class="keyword">return</span> v2;</span><br></pre></td></tr></table></figure>
+<p>为了要让v2最后是1，所以也就是说：</p>
+<p>对于所有的<code>j</code>,都要<code>v8[j] == dword_602120[j] &amp;&amp; v9[j] == dword_6021C0[j]</code>成立</p>
+<p>这里的<code>dword_602120</code>和<code>dword_6021C0</code>（包括上面的<code>unk_602080</code>）都是在ida里可以找到数据的。</p>
+<hr />
+<p>好的，看回到上面的两个处理<code>ptr</code>和<code>v7</code>的函数：</p>
+<p>第一个</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">_DWORD *__fastcall <span class="title">sub_40078E</span><span class="params">(__int64 a1, __int64 a2, <span class="keyword">int</span> a3)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="keyword">int</span> v4; <span class="comment">// [rsp+Ch] [rbp-34h]</span></span><br><span class="line">  <span class="keyword">int</span> i; <span class="comment">// [rsp+2Ch] [rbp-14h]</span></span><br><span class="line">  <span class="keyword">int</span> j; <span class="comment">// [rsp+30h] [rbp-10h]</span></span><br><span class="line">  <span class="keyword">int</span> k; <span class="comment">// [rsp+34h] [rbp-Ch]</span></span><br><span class="line">  _DWORD *v8; <span class="comment">// [rsp+38h] [rbp-8h]</span></span><br><span class="line"></span><br><span class="line">  v4 = a3;</span><br><span class="line">  v8 = sub_400736(a3);</span><br><span class="line">  <span class="keyword">for</span> ( i = <span class="number">0</span>; i &lt; v4; ++i )</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="keyword">for</span> ( j = <span class="number">0</span>; j &lt; v4; ++j )</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="keyword">for</span> ( k = <span class="number">0</span>; k &lt; v4; ++k )</span><br><span class="line">        v8[v4 * i + j] += *(_DWORD *)(<span class="number">4L</span>L * (v4 * i + k) + a1) * *(_DWORD *)(<span class="number">4L</span>L * (v4 * k + j) + a2);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> v8;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>第二个</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">_DWORD *__fastcall <span class="title">sub_400892</span><span class="params">(__int64 a1, __int64 a2, <span class="keyword">int</span> a3)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="keyword">int</span> v4; <span class="comment">// [rsp+Ch] [rbp-24h]</span></span><br><span class="line">  <span class="keyword">int</span> i; <span class="comment">// [rsp+20h] [rbp-10h]</span></span><br><span class="line">  <span class="keyword">int</span> j; <span class="comment">// [rsp+24h] [rbp-Ch]</span></span><br><span class="line">  _DWORD *v7; <span class="comment">// [rsp+28h] [rbp-8h]</span></span><br><span class="line"></span><br><span class="line">  v4 = a3;</span><br><span class="line">  v7 = sub_400736(a3);</span><br><span class="line">  <span class="keyword">for</span> ( i = <span class="number">0</span>; i &lt; v4; ++i )</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="keyword">for</span> ( j = <span class="number">0</span>; j &lt; v4; ++j )</span><br><span class="line">      v7[v4 * i + j] = *(_DWORD *)(<span class="number">4L</span>L * (v4 * i + j) + a1) + *(_DWORD *)(<span class="number">4L</span>L * (v4 * i + j) + a2);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> v7;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这个函数里面的<code>a1,2,3</code>用之前的变量代入其实就是：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; <span class="number">6</span>; ++i) &#123;</span><br><span class="line">    <span class="keyword">for</span> (j = <span class="number">0</span>; j &lt; <span class="number">6</span>; ++j) &#123;</span><br><span class="line">        <span class="keyword">for</span> (k = <span class="number">0</span>; k &lt; <span class="number">6</span>; ++k)&#123;</span><br><span class="line">            v8[<span class="number">6</span> * i + j] += v6[<span class="number">6</span> * i + k] * &amp;unk_602080[<span class="number">6</span> * k + j];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; <span class="number">6</span>; ++i) </span><br><span class="line">    <span class="keyword">for</span> (j = <span class="number">0</span>; j &lt; <span class="number">6</span>; ++j) </span><br><span class="line">        v9[<span class="number">6</span> * i + j] = v7[<span class="number">6</span> * i + j]+ &amp; unk_602080[<span class="number">6</span> * i + j]</span><br></pre></td></tr></table></figure>
+<p>因为<code>v8</code>，<code>v9</code>应该等于<code>dword_602120</code>和<code>dword_6021C0</code>，</p>
+<p>所以这个时候，我们只需要求出v6和v7就可以还原出我们的输入，也就是flag.</p>
+<p>从ida中提取数据之后，分别如下</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">v8 = [<span class="string">'7A'</span>, <span class="string">'CF'</span>, <span class="string">'8C'</span>, <span class="string">'95'</span>, <span class="string">'8E'</span>, <span class="string">'A8'</span>,</span><br><span class="line">      <span class="string">'5F'</span>, <span class="string">'C9'</span>, <span class="string">'7A'</span>, <span class="string">'91'</span>, <span class="string">'88'</span>, <span class="string">'A7'</span>,</span><br><span class="line">      <span class="string">'70'</span>, <span class="string">'C0'</span>, <span class="string">'7F'</span>, <span class="string">'89'</span>, <span class="string">'86'</span>, <span class="string">'93'</span>,</span><br><span class="line">      <span class="string">'5F'</span>, <span class="string">'CF'</span>, <span class="string">'6E'</span>, <span class="string">'86'</span>, <span class="string">'85'</span>, <span class="string">'AD'</span>,</span><br><span class="line">      <span class="string">'88'</span>, <span class="string">'D4'</span>, <span class="string">'A0'</span>, <span class="string">'A2'</span>, <span class="string">'98'</span>, <span class="string">'B3'</span>,</span><br><span class="line">      <span class="string">'79'</span>, <span class="string">'C1'</span>, <span class="string">'7E'</span>, <span class="string">'7E'</span>, <span class="string">'77'</span>, <span class="string">'93'</span>]</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">v9 = [<span class="string">'10'</span>, <span class="string">'08'</span>, <span class="string">'08'</span>, <span class="string">'0E'</span>, <span class="string">'06'</span>, <span class="string">'0B'</span>,</span><br><span class="line">      <span class="string">'05'</span>, <span class="string">'17'</span>, <span class="string">'05'</span>, <span class="string">'0A'</span>, <span class="string">'0C'</span>, <span class="string">'17'</span>,</span><br><span class="line">      <span class="string">'0E'</span>, <span class="string">'17'</span>, <span class="string">'13'</span>, <span class="string">'07'</span>, <span class="string">'08'</span>, <span class="string">'0A'</span>,</span><br><span class="line">      <span class="string">'04'</span>, <span class="string">'0D'</span>, <span class="string">'16'</span>, <span class="string">'11'</span>, <span class="string">'0B'</span>, <span class="string">'16'</span>,</span><br><span class="line">      <span class="string">'06'</span>, <span class="string">'0E'</span>, <span class="string">'02'</span>, <span class="string">'0B'</span>, <span class="string">'12'</span>, <span class="string">'09'</span>,</span><br><span class="line">      <span class="string">'05'</span>, <span class="string">'08'</span>, <span class="string">'08'</span>, <span class="string">'0A'</span>, <span class="string">'10'</span>, <span class="string">'0D'</span>]</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">unk = [<span class="number">8</span>, <span class="number">1</span>, <span class="number">7</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">0</span>,</span><br><span class="line">       <span class="number">4</span>, <span class="number">8</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">9</span>,</span><br><span class="line">       <span class="number">3</span>, <span class="number">8</span>, <span class="number">6</span>, <span class="number">6</span>, <span class="number">4</span>, <span class="number">8</span>,</span><br><span class="line">       <span class="number">3</span>, <span class="number">5</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">8</span>, <span class="number">7</span>,</span><br><span class="line">       <span class="number">0</span>, <span class="number">9</span>, <span class="number">0</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>,</span><br><span class="line">       <span class="number">2</span>, <span class="number">3</span>, <span class="number">2</span>, <span class="number">5</span>, <span class="number">4</span>, <span class="number">0</span>]</span><br></pre></td></tr></table></figure>
+<p>显然代码中的运算都可以看做是6x6的矩阵运算。</p>
+<p>所以可以得到</p>
+<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>V</mi><mn>8</mn></msub><mo>=</mo><msub><mi>V</mi><mn>6</mn></msub><mo separator="true">⋅</mo><mi>U</mi><mi>n</mi><mi>k</mi></mrow><annotation encoding="application/x-tex">V_8=V_6 · Unk 
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.22222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">8</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.84444em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.22222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">6</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">⋅</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.10903em;">U</span><span class="mord mathdefault">n</span><span class="mord mathdefault" style="margin-right:0.03148em;">k</span></span></span></span></span></p>
+<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>V</mi><mn>9</mn></msub><mo>=</mo><msub><mi>V</mi><mn>7</mn></msub><mo>+</mo><mi>U</mi><mi>n</mi><mi>k</mi></mrow><annotation encoding="application/x-tex">V_9=V_7+Unk
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.22222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">9</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.22222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">7</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.10903em;">U</span><span class="mord mathdefault">n</span><span class="mord mathdefault" style="margin-right:0.03148em;">k</span></span></span></span></span></p>
+<p>所以</p>
+<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>V</mi><mn>6</mn></msub><mo>=</mo><msub><mi>V</mi><mn>8</mn></msub><mo separator="true">⋅</mo><mi>U</mi><mi>n</mi><msup><mi>k</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup></mrow><annotation encoding="application/x-tex">V_6=V_8·Unk^{-1}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.22222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">6</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.014108em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.22222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">8</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">⋅</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.10903em;">U</span><span class="mord mathdefault">n</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03148em;">k</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.864108em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">1</span></span></span></span></span></span></span></span></span></span></span></span></span></p>
+<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>V</mi><mn>7</mn></msub><mo>=</mo><msub><mi>V</mi><mn>9</mn></msub><mo>−</mo><mi>U</mi><mi>n</mi><mi>k</mi></mrow><annotation encoding="application/x-tex">V_7=V_9-Unk
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.22222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">7</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.22222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">9</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.10903em;">U</span><span class="mord mathdefault">n</span><span class="mord mathdefault" style="margin-right:0.03148em;">k</span></span></span></span></span></p>
+<hr />
+<p>对于V7而言，只要执行</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">v7 = [(int(x, <span class="number">16</span>) - y) <span class="keyword">for</span> (x, y) <span class="keyword">in</span> zip(v9, unk)]</span><br></pre></td></tr></table></figure>
+<p>对于V8而言，则需要求逆，然后就在网上求了一下。</p>
+<p><img src="/images/hgame-week1/ni.png" alt="ni" /></p>
+<p>然后一乘</p>
+<p><img src="/images/hgame-week1/cheng.png" alt="cheng" /></p>
+<p>最后我们可以得到这两个数组</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">v6 = [</span><br><span class="line">    <span class="number">6</span>, <span class="number">6</span>, <span class="number">6</span>, <span class="number">6</span>, <span class="number">6</span>, <span class="number">7</span>,</span><br><span class="line">    <span class="number">3</span>, <span class="number">5</span>, <span class="number">7</span>, <span class="number">6</span>, <span class="number">6</span>, <span class="number">6</span>,</span><br><span class="line">    <span class="number">6</span>, <span class="number">5</span>, <span class="number">4</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">7</span>,</span><br><span class="line">    <span class="number">3</span>, <span class="number">7</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">5</span>,</span><br><span class="line">    <span class="number">7</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">7</span>, <span class="number">5</span>, <span class="number">7</span>,</span><br><span class="line">    <span class="number">7</span>, <span class="number">6</span>, <span class="number">6</span>, <span class="number">3</span>, <span class="number">6</span>, <span class="number">7</span>,]</span><br><span class="line">v7 = [<span class="number">8</span>, <span class="number">7</span>, <span class="number">1</span>, <span class="number">13</span>, <span class="number">5</span>, <span class="number">11</span>,</span><br><span class="line">      <span class="number">1</span>, <span class="number">15</span>, <span class="number">4</span>, <span class="number">8</span>, <span class="number">9</span>, <span class="number">14</span>,</span><br><span class="line">      <span class="number">11</span>, <span class="number">15</span>, <span class="number">13</span>, <span class="number">1</span>, <span class="number">4</span>, <span class="number">2</span>,</span><br><span class="line">      <span class="number">1</span>, <span class="number">8</span>, <span class="number">15</span>, <span class="number">9</span>, <span class="number">3</span>, <span class="number">15</span>,</span><br><span class="line">      <span class="number">6</span>, <span class="number">5</span>, <span class="number">2</span>, <span class="number">9</span>, <span class="number">15</span>, <span class="number">5</span>,</span><br><span class="line">      <span class="number">3</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">5</span>, <span class="number">12</span>, <span class="number">13</span>]</span><br></pre></td></tr></table></figure>
+<p>然后一拼</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> c <span class="keyword">in</span> [x * <span class="number">16</span> + y <span class="keyword">for</span> (x, y) <span class="keyword">in</span> zip(v6, v7)]:</span><br><span class="line">    print(chr(c), end=<span class="string">""</span>)</span><br></pre></td></tr></table></figure>
+<p>得到最后结果<code>hgame{1_think_Matr1x_is_very_usef5l}</code></p>
+<h3 id="4-r-xor"><a class="markdownIt-Anchor" href="#4-r-xor"></a> 4. r &amp; xor</h3>
+<h4 id="question-8"><a class="markdownIt-Anchor" href="#question-8"></a> Question</h4>
+<p>Description</p>
+<p>论r 与 xor 的重要性 ida里奇怪的大数字?不如按r试一试</p>
+<p>URL</p>
+<p><a href="http://plir4axuz.bkt.clouddn.com/hgame2019/xor" target="_blank" rel="noopener">http://plir4axuz.bkt.clouddn.com/hgame2019/xor</a></p>
+<p>Base Score</p>
+<p>100</p>
+<h4 id="answer-8"><a class="markdownIt-Anchor" href="#answer-8"></a> Answer</h4>
+<p>显然先拉到IDA里去，看一下main：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> __cdecl <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">const</span> <span class="keyword">char</span> **argv, <span class="keyword">const</span> <span class="keyword">char</span> **envp)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="keyword">int</span> result; <span class="comment">// eax</span></span><br><span class="line">  <span class="keyword">signed</span> <span class="keyword">int</span> i; <span class="comment">// [rsp+8h] [rbp-138h]</span></span><br><span class="line">  <span class="keyword">int</span> v5[<span class="number">6</span>]; <span class="comment">// [rsp+10h] [rbp-130h]</span></span><br><span class="line">  <span class="keyword">int</span> v6; <span class="comment">// [rsp+28h] [rbp-118h]</span></span><br><span class="line">  ...</span><br><span class="line">  <span class="keyword">int</span> v29; <span class="comment">// [rsp+94h] [rbp-ACh]</span></span><br><span class="line">  __int64 v30; <span class="comment">// [rsp+A0h] [rbp-A0h]</span></span><br><span class="line">  __int64 v31; <span class="comment">// [rsp+A8h] [rbp-98h]</span></span><br><span class="line">  __int64 v32; <span class="comment">// [rsp+B0h] [rbp-90h]</span></span><br><span class="line">  __int64 v33; <span class="comment">// [rsp+B8h] [rbp-88h]</span></span><br><span class="line">  <span class="keyword">int</span> v34; <span class="comment">// [rsp+C0h] [rbp-80h]</span></span><br><span class="line">  <span class="keyword">char</span> s[<span class="number">104</span>]; <span class="comment">// [rsp+D0h] [rbp-70h]</span></span><br><span class="line">  <span class="keyword">unsigned</span> __int64 v36; <span class="comment">// [rsp+138h] [rbp-8h]</span></span><br><span class="line"></span><br><span class="line">  v36 = __readfsqword(<span class="number">0x28</span>u);</span><br><span class="line">  v30 = <span class="number">3483951462304802664L</span>L;</span><br><span class="line">  v31 = <span class="number">6859934930880520053L</span>L;</span><br><span class="line">  v32 = <span class="number">3560223458491458926L</span>L;</span><br><span class="line">  v33 = <span class="number">2387225997007150963L</span>L;</span><br><span class="line">  v34 = <span class="number">8200481</span>;</span><br><span class="line">  <span class="built_in">memset</span>(v5, <span class="number">0</span>, <span class="number">0x90</span>uLL);</span><br><span class="line">  v6 = <span class="number">1</span>;</span><br><span class="line">  ...</span><br><span class="line">  v29 = <span class="number">30</span>;</span><br><span class="line">  <span class="built_in">puts</span>(<span class="string">"Input the flag:"</span>);</span><br><span class="line">  __isoc99_scanf(<span class="string">"%s"</span>, s);</span><br><span class="line">  <span class="keyword">if</span> ( <span class="built_in">strlen</span>(s) == <span class="number">35</span> )</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="keyword">for</span> ( i = <span class="number">0</span>; i &lt; <span class="number">35</span>; ++i )</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="keyword">if</span> ( s[i] != (v5[i] ^ *((<span class="keyword">char</span> *)&amp;v30 + i)) )</span><br><span class="line">      &#123;</span><br><span class="line">        <span class="built_in">puts</span>(<span class="string">"Wrong flag , try again later!"</span>);</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">puts</span>(<span class="string">"You are right! Congratulations!!"</span>);</span><br><span class="line">    result = <span class="number">0</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">else</span></span><br><span class="line">  &#123;</span><br><span class="line">    <span class="built_in">puts</span>(<span class="string">"Wrong flag , try again later!"</span>);</span><br><span class="line">    result = <span class="number">0</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> result;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>看下来，其实flag就是<code>s[i] == (v5[i] ^ *((char *)&amp;v30 + i))</code>成立</p>
+<p>i从0-34，其实对应的就是v5一直到v29的数，但是看这些的地址，中间是有空隙的，所以要补0，最后拿到这前面的35个数分别是</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[0, 0, 0, 0, 0, 0, 1, 0, 7, 0, 92, 18, 38, 11, 93, 43, 11, 23, 0, 23, 43, 69, 6, 86, 44, 54, 67, 0, 66, 85, 126,</span><br><span class="line">      72, 85, 30, 0]</span><br></pre></td></tr></table></figure>
+<p>后面的就对应着</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">v30 &#x3D; 3483951462304802664LL;</span><br><span class="line">v31 &#x3D; 6859934930880520053LL;</span><br><span class="line">v32 &#x3D; 3560223458491458926LL;</span><br><span class="line">v33 &#x3D; 2387225997007150963LL;</span><br><span class="line">v34 &#x3D; 8200481;</span><br></pre></td></tr></table></figure>
+<p>一开始我就直接拼起来，化成Hex，然后按照char取出来进行异或运算，结果出来一堆奇怪的东西。</p>
+<p>然后看到提示，说要按 R？</p>
+<p>然后就变成了</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">v30 &#x3D; &#39;0Y&#123;emagh&#39;;</span><br><span class="line">v31 &#x3D; &#39;_3byam_u&#39;;</span><br><span class="line">v32 &#x3D; &#39;1ht_deen&#39;;</span><br><span class="line">v33 &#x3D; &#39;!!!en0_s&#39;;</span><br><span class="line">v34 &#x3D; &#39;&#125;!!&#39;;</span><br></pre></td></tr></table></figure>
+<p>嗯嗯嗯？？？</p>
+<p>（应该是地址是减小的，所以要反过来拼）</p>
+<p>显然要的就是<code>hgame{Y0u_mayb3_need_th1s_0ne!!!!!}</code></p>
+<p>我直接提交了一下，发现并不行。</p>
+<p>然后再拿着前面那个35个数字异或一下，变成了</p>
+<p><code>hgame{X0r_1s_interest1ng_isn't_it?}</code></p>
+<p>没错就是这个。</p>
+<h3 id="5-pro的python教室一"><a class="markdownIt-Anchor" href="#5-pro的python教室一"></a> 5. Pro的Python教室(一)</h3>
+<h4 id="question-9"><a class="markdownIt-Anchor" href="#question-9"></a> Question</h4>
+<p>Description</p>
+<p>Easiest Python Challenge!</p>
+<p>URL</p>
+<p><a href="http://plqbnxx54.bkt.clouddn.com/first.py" target="_blank" rel="noopener">http://plqbnxx54.bkt.clouddn.com/first.py</a></p>
+<p>Base Score</p>
+<p>100</p>
+<h4 id="answer-9"><a class="markdownIt-Anchor" href="#answer-9"></a> Answer</h4>
+<p>点开网页，得到源码如下</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> base64</span><br><span class="line"><span class="keyword">import</span> hashlib</span><br><span class="line"></span><br><span class="line">enc1 = <span class="string">'hgame&#123;'</span></span><br><span class="line">enc2 = <span class="string">'SGVyZV8xc18zYXN5Xw=='</span></span><br><span class="line">enc3 = <span class="string">'Pyth0n&#125;'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">print</span> <span class="string">'Welcome to Processor\'s Python Classroom!\n'</span></span><br><span class="line"><span class="keyword">print</span> <span class="string">'Here is Problem One.'</span></span><br><span class="line"><span class="keyword">print</span> <span class="string">'There\'re three parts of the flag.'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">print</span> <span class="string">'------------------------------------------------'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">print</span> <span class="string">'Plz input the first part:'</span></span><br><span class="line">first = raw_input()</span><br><span class="line"><span class="keyword">if</span> first == enc1:</span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="keyword">print</span> <span class="string">'Sorry , You\'re so vegatable!'</span></span><br><span class="line">    exit()</span><br><span class="line"></span><br><span class="line"><span class="keyword">print</span> <span class="string">'Plz input the secend part:'</span></span><br><span class="line">secend = raw_input()</span><br><span class="line">secend = base64.b64encode(secend)</span><br><span class="line"><span class="keyword">if</span> secend == enc2:</span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="keyword">print</span> <span class="string">'Sorry , You\'re so vegatable!'</span></span><br><span class="line">    exit()</span><br><span class="line"></span><br><span class="line"><span class="keyword">print</span> <span class="string">'Plz input the third part:'</span></span><br><span class="line">third = raw_input()</span><br><span class="line">third = base64.b32decode(third)</span><br><span class="line"><span class="keyword">if</span> third == enc3:</span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="keyword">print</span> <span class="string">'Sorry , You\'re so vegatable!'</span></span><br><span class="line">    exit()</span><br><span class="line"></span><br><span class="line"><span class="keyword">print</span> <span class="string">'Oh, You got it !'</span></span><br></pre></td></tr></table></figure>
+<p>从<code>secend = base64.b64encode(secend)看出来</code>，里面的<code>enc2</code>明显就是base64编码了，然后base64解码之后，把<code>enc1,2,3</code>拼起来就是了。</p>
+<p><code>SGVyZV8xc18zYXN5Xw==</code>解码得到<code>Here_1s_3asy_</code></p>
+<p>最后flag就是<code>hgame{Here_1s_3asy_Pyth0n}</code></p>
+<p>（enc3这个不是应该也要加密一下么。。但是我忘了，但但是就过了。。。）</p>
+<h2 id="iii-pwn"><a class="markdownIt-Anchor" href="#iii-pwn"></a> Ⅲ PWN</h2>
+<h4 id="2-aaaaaaaaaa"><a class="markdownIt-Anchor" href="#2-aaaaaaaaaa"></a> 2. aaaaaaaaaa</h4>
+<h4 id="question-10"><a class="markdownIt-Anchor" href="#question-10"></a> Question</h4>
+<p>Description</p>
+<p>pwn很简单的，a上去就完事了 nc 118.24.3.214 9999</p>
+<p>URL</p>
+<p><a href="http://plps4kyke.bkt.clouddn.com/aaaaaaaaaa" target="_blank" rel="noopener">http://plps4kyke.bkt.clouddn.com/aaaaaaaaaa</a></p>
+<p>Base Score</p>
+<p>50</p>
+<h4 id="answer-10"><a class="markdownIt-Anchor" href="#answer-10"></a> Answer</h4>
+<p>下载这个文件，一把拉到IDA里，汇编看不来，看看C语言。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> __cdecl <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">const</span> <span class="keyword">char</span> **argv, <span class="keyword">const</span> <span class="keyword">char</span> **envp)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="keyword">signed</span> <span class="keyword">int</span> v3; <span class="comment">// eax</span></span><br><span class="line">  <span class="keyword">signed</span> <span class="keyword">int</span> v5; <span class="comment">// [rsp+Ch] [rbp-4h]</span></span><br><span class="line"></span><br><span class="line">  setbuf(_bss_start, <span class="number">0L</span>L);</span><br><span class="line">  signal(<span class="number">14</span>, (<span class="keyword">__sighandler_t</span>)handle);</span><br><span class="line">  alarm(<span class="number">0xA</span>u);</span><br><span class="line">  <span class="built_in">puts</span>(<span class="string">"Welcome to PWN'world!let us aaaaaaaaaa!!!"</span>);</span><br><span class="line">  v5 = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">while</span> ( <span class="number">1</span> )</span><br><span class="line">  &#123;</span><br><span class="line">    v3 = v5++;</span><br><span class="line">    <span class="keyword">if</span> ( v3 &gt; <span class="number">99</span> )</span><br><span class="line">      <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">if</span> ( getchar() != <span class="number">97</span> )</span><br><span class="line">      <span class="built_in">exit</span>(<span class="number">0</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  system(<span class="string">"/bin/sh"</span>);</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>显然要执行到<code>system(&quot;/bin/sh&quot;);</code>才能搞事情，所以就是要让<code>v3</code>大于99，那么看下来只要输入好多好多的<code>aaaaaaaaaaaaaaaa...</code>就行了。（具体来讲大于99个a）</p>
+<blockquote>
+<p>ubuntu@VM-0-10-ubuntu:~/bin$ nc 118.24.3.214 9999<br />
+Welcome to PWN’world!let us aaaaaaaaaa!!!<br />
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+</blockquote>
+<p>然后这里就多了一个光标，等待执行命令。</p>
+<p>那就来个<code>ls</code>，看看有啥吧。</p>
+<blockquote>
+<p>ls<br />
+aaaaaaaaaa<br />
+bin<br />
+dev<br />
+flag<br />
+lib<br />
+lib64<br />
+<a href="http://run.sh" target="_blank" rel="noopener">run.sh</a></p>
+</blockquote>
+<p>哎呦，flag！那么打开flag就行了。</p>
+<p>所以<code>vi flag</code>，结果：</p>
+<blockquote>
+<p>/bin/sh: 2: vi: not found</p>
+</blockquote>
+<p>没有？那我看看你有啥命令。。。</p>
+<p>执行<code>cd bin</code>和<code>ls</code></p>
+<blockquote>
+<p>ls<br />
+cat<br />
+ls<br />
+sh<br />
+timeout</p>
+</blockquote>
+<p>好吧好吧…那就<code>cat flag</code></p>
+<blockquote>
+<p>cat flag<br />
+hgame{Aa4_4aA_4a4aAAA}</p>
+</blockquote>
+<p>那么flag就是<code>hgame{Aa4_4aA_4a4aAAA}</code></p>
+<p>(这里好像回不去上级菜单，所以我就重新nc一遍了）</p>
+<h2 id="iv-misc"><a class="markdownIt-Anchor" href="#iv-misc"></a> Ⅳ MISC</h2>
+<h3 id="1-hidden-image-in-lsb"><a class="markdownIt-Anchor" href="#1-hidden-image-in-lsb"></a> 1. Hidden Image in LSB</h3>
+<h4 id="question-11"><a class="markdownIt-Anchor" href="#question-11"></a> Question</h4>
+<p>Description</p>
+<p>Here are some magic codes which can hide information in an ordinary picture, can you extract the hidden image in the provided picture?<br />
+其实本来想让大家写写代码，后来干脆就送分了<br />
+有个神器叫 stegsolve，利用它可以直接提取本题 flag</p>
+<p>URL</p>
+<p><a href="http://plir4axuz.bkt.clouddn.com/hgame2019/lsb.zip" target="_blank" rel="noopener">http://plir4axuz.bkt.clouddn.com/hgame2019/lsb.zip</a></p>
+<p>Base Score</p>
+<p>50</p>
+<h4 id="answer-11"><a class="markdownIt-Anchor" href="#answer-11"></a> Answer</h4>
+<p>这个就是看每个像素的最后一位，然后放进stegsolve，真的就出来了。</p>
+<p><img src="/images/hgame-week1/flag_img.png" alt="flag_img" /></p>
+<p>没错，flag就是<code>hgame{LSB_is_easy_for_u}</code></p>
+<h3 id="2-打字机"><a class="markdownIt-Anchor" href="#2-打字机"></a> 2. 打字机</h3>
+<p>Description</p>
+<p>Aris(划掉)牌打字机，时尚时尚最时尚~<br />
+hint:谷歌有个以图搜图功能很不错，百度识图好垃圾的。。。</p>
+<p>URL</p>
+<p><a href="http://plps4kyke.bkt.clouddn.com/%E6%89%93%E5%AD%97%E6%9C%BA.zip" target="_blank" rel="noopener">http://plps4kyke.bkt.clouddn.com/打字机.zip</a></p>
+<p>Base Score</p>
+<p>50</p>
+<h4 id="answer-12"><a class="markdownIt-Anchor" href="#answer-12"></a> Answer</h4>
+<p>拿到zip后，发现里面有两张图片。</p>
+<p><img src="/images/hgame-week1/flag.png" alt="flag" /></p>
+<p><img src="/images/hgame-week1/type_writer.png" alt="type_writer" /></p>
+<p>第一个看上去就像是hgame{…}的感觉，然后下面的这个键盘第一感觉就是对于QWERTY键盘。所以只要翻译一下就行了。</p>
+<p>但是问题是flag里面有好多字母，下面都没有。</p>
+<p>看来打字机上是大写，那么我们还需要小写版的对应表。</p>
+<p>Google搜图之后发现了，早有牛人对出了小写版的。</p>
+<p><img src="/images/hgame-week1/lower.png" alt="lower" /></p>
+<p>翻译之后，就拿到了<code>hgame{My_vi0let_tyPewRiter}</code></p>
+<h3 id="3broken-chest"><a class="markdownIt-Anchor" href="#3broken-chest"></a> 3.Broken Chest</h3>
+<h4 id="question-12"><a class="markdownIt-Anchor" href="#question-12"></a> Question</h4>
+<p>Description</p>
+<p>这个箱子坏掉了！快用你无敌的[疯狂钻石]想想办法啊！<br />
+更新一波学习资料https://ctf-wiki.github.io/ctf-wiki/misc/archive/zip/</p>
+<p>URL</p>
+<p><a href="http://plqfgjy5a.bkt.clouddn.com/Broken-Chest.zip" target="_blank" rel="noopener">http://plqfgjy5a.bkt.clouddn.com/Broken-Chest.zip</a></p>
+<p>Base Score</p>
+<p>50</p>
+<h4 id="answer-13"><a class="markdownIt-Anchor" href="#answer-13"></a> Answer</h4>
+<p>拿到压缩包，结果坏了。</p>
+<p>看十六进制，开头的50 4B 03 04被改了，改回来。</p>
+<p>打开压缩包，结果flag.txt被锁住了。</p>
+<p><del>但是可以看到大小是20B，CRC是b0b37cce</del></p>
+<p><del>所以爆破这20B的内容，找到一样的CRC。</del></p>
+<p><del>爆个头，爆完电脑都没了</del></p>
+<p>突然发现压缩包里有个注释<code>S0mETh1ng_U5efuL</code>.</p>
+<p>嗯？这就是密码？没错，用这个打开得到<code>hgame{Cra2y_D1aM0nd}</code></p>
+<h2 id="v-crypto"><a class="markdownIt-Anchor" href="#v-crypto"></a> Ⅴ CRYPTO</h2>
+<h3 id="1-mix"><a class="markdownIt-Anchor" href="#1-mix"></a> 1. Mix</h3>
+<h4 id="question-13"><a class="markdownIt-Anchor" href="#question-13"></a> Question</h4>
+<p>Description</p>
+<p>–…/…-/…-/-…/–…/…–/…/…-./-…/-…/-…/…-./–…/----./…-/…-/–…/.----/-…/-…/–…/-…/-…/…—/…/.----/-…/-…/…–/…-/…–/-----/-…/…/–…/-… So easy</p>
+<p>URL</p>
+<p><a href="http://example.com/" target="_blank" rel="noopener">http://example.com</a></p>
+<p>Base Score</p>
+<p>50</p>
+<h4 id="answer-14"><a class="markdownIt-Anchor" href="#answer-14"></a> Answer</h4>
+<p>这玩意一看就是个摩斯电码，翻译一波。</p>
+<p>结果拿到了<code>744B735F6D6F7944716B7B6251663430657D</code></p>
+<p>感觉是个十六进制编码，然后按照ASCII码翻译一下，拿到了<code>tKs_moyDqk{bQf40e}</code></p>
+<p>这个看上去好像就要成功了，但是还是莫名其妙的。</p>
+<p>和我们想要的hgame{…}看上去，大小括号都有了，但是左大括号的位置不对。</p>
+<p>两个一组进行栅栏重排，得到了<code>tsmyq{Q4eK_oDkbf0}</code></p>
+<p>这个看上去就像是<code>hgame{...........}</code>的偏移版。</p>
+<p>然后发现规律就是这个</p>
+<blockquote>
+<p>ABCDEFGHIJKLMNOPQRSTUVWXYZ<br />
+OPQRSTUVWXYZABCDEFGHIJKLMN</p>
+</blockquote>
+<p>全部对应下来就得到了<code>hgame{E4sY_cRypt0}</code></p>
+<h3 id="2-perfect_secrecy"><a class="markdownIt-Anchor" href="#2-perfect_secrecy"></a> 2. perfect_secrecy!</h3>
+<h4 id="question-14"><a class="markdownIt-Anchor" href="#question-14"></a> Question</h4>
+<p>Description</p>
+<p>Mom told me OTP is perfect secrecy!（结果加上hgame{}）</p>
+<p>URL</p>
+<p><a href="http://plqbnxx54.bkt.clouddn.com/easy_otp.py" target="_blank" rel="noopener">http://plqbnxx54.bkt.clouddn.com/easy_otp.py</a></p>
+<p>Base Score</p>
+<p>100</p>
+<h4 id="answer-15"><a class="markdownIt-Anchor" href="#answer-15"></a> Answer</h4>
+<p>拿到源码，看下</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">import binascii</span><br><span class="line">import string</span><br><span class="line">import random</span><br><span class="line"></span><br><span class="line">def strxor(a, b):</span><br><span class="line">    <span class="keyword">return</span> <span class="string">""</span>.join(hex(x ^ y)[<span class="number">2</span>:].zfill(<span class="number">2</span>) <span class="keyword">for</span> (x, y) in zip(a, b))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">fp = open(<span class="string">'poem.txt'</span>, <span class="string">'rb'</span>)</span><br><span class="line">flag = <span class="string">"*********************************"</span></span><br><span class="line">strings = fp.readlines()</span><br><span class="line">key = hex(random.randint(<span class="number">2</span>**<span class="number">511</span>, <span class="number">2</span>**<span class="number">512</span>))[<span class="number">2</span>:]</span><br><span class="line">strs = [strxor(i[:<span class="number">-3</span>], binascii.unhexlify(key)) <span class="keyword">for</span> i in strings]</span><br><span class="line">result = strxor(flag.encode(<span class="string">'utf-8'</span>), binascii.unhexlify(key))</span><br><span class="line"><span class="keyword">print</span>(strs)</span><br><span class="line"><span class="keyword">print</span>(result)</span><br><span class="line"></span><br><span class="line"><span class="string">''</span><span class="string">'</span></span><br><span class="line"><span class="string">output:</span></span><br><span class="line"><span class="string">['</span>daaa4b4e8c996dc786889cd63bc4df4d1e7dc6f3f0b7a0b61ad48811f6f7c9bfabd7083c53ba54<span class="string">',</span></span><br><span class="line"><span class="string">'</span>c5a342468c8c7a88999a9dd623c0cc4b0f7c829acaf8f3ac13c78300b3b1c7a3ef8e193840b<span class="string">b',</span></span><br><span class="line"><span class="string">'</span>dda342458c897a8285df879e3285ce511e7c8d9afff9b7ff15de8a16b394c7bdab920e7946a05e9941d8308e<span class="string">',</span></span><br><span class="line"><span class="string">'</span>d9b05b4cd5ce7c8f938bd39e24d0df191d7694dfeaf8bfbb56e28900e1b8dff1bb985c2d5aa154<span class="string">',</span></span><br><span class="line"><span class="string">'</span>d9aa4b00c88b7fc79d99d38223c08d54146b88d3f0f0f38c03df8d52f0bfc1bda3d7133712a55e9948c32c8a<span class="string">',</span></span><br><span class="line"><span class="string">'</span>c4b60e46c9827cc79e9698936bd1c55c5b6e87c8f0febdb856fe8052e4bfc9a5efbe5c3f57ad4b9944de34<span class="string">',</span></span><br><span class="line"><span class="string">'</span>d9aa5700da817f94d29e81936bc4c1555b7b94d5f5f2bdff37df8252ffbecfb9bbd7152a12bc4fc00ad7229090<span class="string">',</span></span><br><span class="line"><span class="string">'</span>c4e24645cd9c28939a86d3982ac8c819086989d1fbf9f39e18d5c601fbb6dab4ef9e12795bbc549959d9229090<span class="string">',</span></span><br><span class="line"><span class="string">'</span>d9aa4b598c80698a97df879e2ec08d5b1e7f89c8fbb7beba56f0c619fdb2c4bdef8313795fa149dc0ad4228f<span class="string">',</span></span><br><span class="line"><span class="string">'</span>cce25d48d98a6c8280df909926c0de19143983c8befab6ff21d99f52e4b2daa5ef83143647e854d60ad5269c87<span class="string">',</span></span><br><span class="line"><span class="string">'</span>d9aa4b598c85668885df9d993f85e419107783cdbee3bbba1391b11afcf7c3bfaa805c2d5aad42995ede2cdd82977244<span class="string">',</span></span><br><span class="line"><span class="string">'</span>e1ad40478c82678995df809e2ac9c119323994cffbb7a7b713d4c626fcb888b5aa920c354be853d60ac5269199<span class="string">',</span></span><br><span class="line"><span class="string">'</span>c4ac0e53c98d7a8286df84936bc8c84d5b50889aedfebfba18d28352daf7cfa3a6920a3c<span class="string">',</span></span><br><span class="line"><span class="string">'</span>d9aa4f548c9a609ed297969739d18d5a146c8adebef1bcad11d49252c7bfd1f1bc87152b5bbc07dd4fd226948397<span class="string">',</span></span><br><span class="line"><span class="string">'</span>c4a40e698c9d6088879397d626c0c84d5b6d8edffbb792b902d49452ffbec6b6ef8e193840<span class="string">',</span></span><br><span class="line"><span class="string">'</span>c5ad5900df8667929e9bd3bf6bc2df5c1e6dc6cef6f2b6ff21d8921ab3a4c1bdaa991f3c12a949dd0ac5269c<span class="string">']</span></span><br><span class="line"><span class="string">'</span>c2967e7fc59d57899d8bac852ac3c866127fb9d7f1e5b68002d9871cccb8c6b2aa<span class="string">'</span></span><br><span class="line"><span class="string">'</span><span class="string">''</span></span><br></pre></td></tr></table></figure>
+<p>可以看到，这个代码随机生成了一个512位的密码，然后对所有的字符串进行异或运算。</p>
+<p>由于这个加密是按照一个字节一个字节算的，所以一开始我拿出了所有字符串的前两个。</p>
+<p><code>['da','c5','dd','d9','d9','c4','d9','c4','d9','cc','d9','e1','c4','d9','c4','c5']</code></p>
+<p>又因为异或两次会不变，所以我对上面的这些分别从0-255进行异或，然后去寻找那些恰好可以让所有的字符都是字母的值。</p>
+<p>代码如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> binascii</span><br><span class="line"></span><br><span class="line">s = [<span class="string">'da'</span>, <span class="string">'c5'</span>, <span class="string">'dd'</span>, <span class="string">'d9'</span>, <span class="string">'d9'</span>, <span class="string">'c4'</span>, <span class="string">'d9'</span>, <span class="string">'c4'</span>, <span class="string">'d9'</span>, <span class="string">'cc'</span>, <span class="string">'d9'</span>, <span class="string">'e1'</span>, <span class="string">'c4'</span>, <span class="string">'d9'</span>, <span class="string">'c4'</span>, <span class="string">'c5'</span>]</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> key <span class="keyword">in</span> range(<span class="number">0</span>, <span class="number">256</span>):</span><br><span class="line">    answers = [chr(binascii.unhexlify(t)[<span class="number">0</span>] ^ key) <span class="keyword">for</span> t <span class="keyword">in</span> s]</span><br><span class="line">    f = <span class="literal">True</span></span><br><span class="line">    <span class="keyword">for</span> answer <span class="keyword">in</span> answers:</span><br><span class="line">        f = f &amp; ((<span class="string">'a'</span> &lt;= answer &lt;= <span class="string">'z'</span>) | (<span class="string">'A'</span> &lt;= answer &lt;= <span class="string">'Z'</span>) | (answer == <span class="string">' '</span>))</span><br><span class="line">    <span class="keyword">if</span> f:</span><br><span class="line">        print(key)</span><br></pre></td></tr></table></figure>
+<p>但是一运行，结果却让我有点懵逼：</p>
+<blockquote>
+<p>136<br />
+137<br />
+138<br />
+139<br />
+141<br />
+142<br />
+143<br />
+148<br />
+149<br />
+150<br />
+168<br />
+169<br />
+170<br />
+171<br />
+173<br />
+174<br />
+175<br />
+180<br />
+181<br />
+182</p>
+</blockquote>
+<p>只是第一个就有这么多种？那后面会有多少种啊。。。</p>
+<p>但是呢，我感觉我的思路应该是对的，所以干脆把后面的都先弄出来。</p>
+<p>结果后面的值都是唯一的，所以我就直接输出flag的值了</p>
+<p>代码如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> binascii</span><br><span class="line"></span><br><span class="line">s = [<span class="string">'daaa4b4e8c996dc786889cd63bc4df4d1e7dc6f3f0b7a0b61ad48811f6f7c9bfabd7083c53ba54'</span>,</span><br><span class="line">     <span class="string">'c5a342468c8c7a88999a9dd623c0cc4b0f7c829acaf8f3ac13c78300b3b1c7a3ef8e193840bb'</span>,</span><br><span class="line">     <span class="string">'dda342458c897a8285df879e3285ce511e7c8d9afff9b7ff15de8a16b394c7bdab920e7946a05e9941d8308e'</span>,</span><br><span class="line">     <span class="string">'d9b05b4cd5ce7c8f938bd39e24d0df191d7694dfeaf8bfbb56e28900e1b8dff1bb985c2d5aa154'</span>,</span><br><span class="line">     <span class="string">'d9aa4b00c88b7fc79d99d38223c08d54146b88d3f0f0f38c03df8d52f0bfc1bda3d7133712a55e9948c32c8a'</span>,</span><br><span class="line">     <span class="string">'c4b60e46c9827cc79e9698936bd1c55c5b6e87c8f0febdb856fe8052e4bfc9a5efbe5c3f57ad4b9944de34'</span>,</span><br><span class="line">     <span class="string">'d9aa5700da817f94d29e81936bc4c1555b7b94d5f5f2bdff37df8252ffbecfb9bbd7152a12bc4fc00ad7229090'</span>,</span><br><span class="line">     <span class="string">'c4e24645cd9c28939a86d3982ac8c819086989d1fbf9f39e18d5c601fbb6dab4ef9e12795bbc549959d9229090'</span>,</span><br><span class="line">     <span class="string">'d9aa4b598c80698a97df879e2ec08d5b1e7f89c8fbb7beba56f0c619fdb2c4bdef8313795fa149dc0ad4228f'</span>,</span><br><span class="line">     <span class="string">'cce25d48d98a6c8280df909926c0de19143983c8befab6ff21d99f52e4b2daa5ef83143647e854d60ad5269c87'</span>,</span><br><span class="line">     <span class="string">'d9aa4b598c85668885df9d993f85e419107783cdbee3bbba1391b11afcf7c3bfaa805c2d5aad42995ede2cdd82977244'</span>,</span><br><span class="line">     <span class="string">'e1ad40478c82678995df809e2ac9c119323994cffbb7a7b713d4c626fcb888b5aa920c354be853d60ac5269199'</span>,</span><br><span class="line">     <span class="string">'c4ac0e53c98d7a8286df84936bc8c84d5b50889aedfebfba18d28352daf7cfa3a6920a3c'</span>,</span><br><span class="line">     <span class="string">'d9aa4f548c9a609ed297969739d18d5a146c8adebef1bcad11d49252c7bfd1f1bc87152b5bbc07dd4fd226948397'</span>,</span><br><span class="line">     <span class="string">'c4a40e698c9d6088879397d626c0c84d5b6d8edffbb792b902d49452ffbec6b6ef8e193840'</span>,</span><br><span class="line">     <span class="string">'c5ad5900df8667929e9bd3bf6bc2df5c1e6dc6cef6f2b6ff21d8921ab3a4c1bdaa991f3c12a949dd0ac5269c'</span>]</span><br><span class="line"></span><br><span class="line">flag = <span class="string">'c2967e7fc59d57899d8bac852ac3c866127fb9d7f1e5b68002d9871cccb8c6b2aa'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>, <span class="number">33</span>):</span><br><span class="line">    <span class="keyword">for</span> key <span class="keyword">in</span> range(<span class="number">0</span>, <span class="number">256</span>):</span><br><span class="line">        answers = [chr(binascii.unhexlify(t[i * <span class="number">2</span>:i * <span class="number">2</span> + <span class="number">2</span>])[<span class="number">0</span>] ^ key) <span class="keyword">for</span> t <span class="keyword">in</span> s]</span><br><span class="line">        f = <span class="literal">True</span></span><br><span class="line">        <span class="keyword">for</span> answer <span class="keyword">in</span> answers:</span><br><span class="line">            f = f &amp; ((<span class="string">'a'</span> &lt;= answer &lt;= <span class="string">'z'</span>) | (<span class="string">'A'</span> &lt;= answer &lt;= <span class="string">'Z'</span>) | (answer == <span class="string">' '</span>))</span><br><span class="line">        <span class="keyword">if</span> f:</span><br><span class="line">            print(chr(binascii.unhexlify(flag[i * <span class="number">2</span>:i * <span class="number">2</span> + <span class="number">2</span>])[<span class="number">0</span>] ^ key), end=<span class="string">""</span>)</span><br></pre></td></tr></table></figure>
+<p>最后运行得到</p>
+<blockquote>
+<p>JKHIOLMVWTjkhiolmvwtTP_is_not_safe_if_more_than_once</p>
+</blockquote>
+<p>前面的<code>JKHIOLMVWTjkhiolmvwt</code>就是来自第一个的，后面的<code>TP_is_not_safe_if_more_than_once</code>很明显就是flag的一部分了。</p>
+<p>那么很显然，第一个字母就是O，然后得到flag：</p>
+<p><code>hgame{OTP_is_not_safe_if_more_than_once}</code></p>
+<h3 id="3-base全家"><a class="markdownIt-Anchor" href="#3-base全家"></a> 3. Base全家</h3>
+<h4 id="question-15"><a class="markdownIt-Anchor" href="#question-15"></a> Question</h4>
+<p>Description</p>
+<p>全家老小</p>
+<p>URL</p>
+<p><a href="http://plir4axuz.bkt.clouddn.com/hgame2019/enc.txt" target="_blank" rel="noopener">http://plir4axuz.bkt.clouddn.com/hgame2019/enc.txt</a></p>
+<p>Base Score</p>
+<p>50</p>
+<h4 id="answer-16"><a class="markdownIt-Anchor" href="#answer-16"></a> Answer</h4>
+<p>既然说了是base全家，那么就是base16,base32,base64全上呗。</p>
+<p>用Python写了个</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> base64</span><br><span class="line"><span class="keyword">import</span> binascii</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">b64</span><span class="params">(t)</span>:</span> <span class="keyword">return</span> base64.b64decode(t)</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">b32</span><span class="params">(t)</span>:</span> <span class="keyword">return</span> base64.b32decode(t)</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">b16</span><span class="params">(t)</span>:</span> <span class="keyword">return</span> base64.b16decode(t)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">file = open(<span class="string">"enc.txt"</span>, <span class="string">"rb"</span>)</span><br><span class="line">text = file.read()</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> <span class="number">1</span>:</span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        text = b16(text)</span><br><span class="line">        print(text)</span><br><span class="line">    <span class="keyword">except</span> binascii.Error:</span><br><span class="line">        <span class="keyword">try</span>:</span><br><span class="line">            text = b32(text)</span><br><span class="line">            print(text)</span><br><span class="line">        <span class="keyword">except</span> binascii.Error:</span><br><span class="line">            text = b64(text)</span><br><span class="line">            print(text)</span><br></pre></td></tr></table></figure>
+<p>运行一波，最后虽然报错了，但是在输出里面发现了一行</p>
+<p><code>b'base58 : 2BAja2VqXoHi9Lo5kfQZBPjq1EmZHGEudM5JyDPREPmS3CxrpB8BnC'</code></p>
+<p>base58解码之后就是<code>hgame{40ca78cde14458da697066eb4cc7daf6}</code></p>
+
+      
+    </div>
+
+  </div>
+
+  <div class="article-footer">
+    <div class="article-meta pull-left">
+
+    
+      
+
+    <span class="post-categories">
+      <i class="icon-categories"></i>
+        <a href="/categories/CTF/">CTF</a>
+    </span>
+    
+
+    
+    
+
+    <span class="post-tags">
+      <i class="icon-tags"></i>
+        <a href="/tags/WriteUp/">WriteUp</a>
+    </span>
+    
+
+    </div>
+
+    
+  </div>
+</article>
+
+  
+
+
+
+
+
+
+    </main>
+
+    <footer class="site-footer">
+  <p class="site-info">
+    Proudly powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and
+    Theme by <a href="https://github.com/CodeDaraW/Hacker" target="_blank">Hacker</a>
+    </br>
+    
+    &copy; 2021 Rainbow Yang
+    
+  </p>
+</footer>
+    
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-93934873-1', 'auto');
+    ga('send', 'pageview');
+
+</script>
+
+    
+  </div>
+</div>
+</body>
+</html>
