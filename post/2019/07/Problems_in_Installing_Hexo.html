@@ -11,7 +11,7 @@
 
   
   <meta name="description" content="&amp;#x6267;&amp;#x884C;npm install hexo-cli -g&amp;#x540E;&amp;#x65E0;&amp;#x53CD;&amp;#x5E94;
-&amp;#x89E3;&amp;#x51B3;&amp;#x65B9;&amp;#x6CD5;&amp;#x662F;&amp;#x8981;&amp;#x628A;npm&amp;#x7684;&amp;#x4ED3;&amp;#">
+&amp;#x89E3;&amp;#x51B3;&amp;#x65B9;&amp;#x6CD5;&amp;#x662F;&amp;#x8981;&amp;#x628A;npm&amp;#x7684;&amp;#x4ED3;&amp;#x">
   
 
   
@@ -95,14 +95,14 @@
 <p>&#x547D;&#x4EE4;&#x5982;&#x4E0B;&#xFF1A;</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm config set registry https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
 <h2 id="&#x5728;hexo&#x4E2D;&#x4F7F;&#x7528;katex&#x7684;&#x65B9;&#x6CD5;">&#x5728;Hexo&#x4E2D;&#x4F7F;&#x7528;KaTeX&#x7684;&#x65B9;&#x6CD5;</h2>
-<p>&#x76EE;&#x524D;&#x770B;&#x4E0B;&#x6765;&#x6700;&#x597D;&#x7684;&#x65B9;&#x6CD5;&#x662F;&#x4F7F;&#x7528;<a href="https://github.com/thcd/hexo-katex" target="_blank" rel="noopener">hexo-katex</a>&#x4EE5;&#x53CA;hexo-renderer-pandoc</p>
+<p>&#x76EE;&#x524D;&#x770B;&#x4E0B;&#x6765;&#x6700;&#x597D;&#x7684;&#x65B9;&#x6CD5;&#x662F;&#x4F7F;&#x7528;<a target="_blank" rel="noopener" href="https://github.com/thcd/hexo-katex">hexo-katex</a>&#x4EE5;&#x53CA;hexo-renderer-pandoc</p>
 <p>&#x64CD;&#x4F5C;&#x5982;&#x4E0B;&#xFF1A;</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">npm uninstall hexo-renderer-marked --save</span><br><span class="line">npm install hexo-renderer-pandoc --save</span><br><span class="line"></span><br><span class="line">npm install hexo-katex --save</span><br></pre></td></tr></table></figure>
 <p>&#x5E76;&#x5728;<code>_config.yml</code>&#x4E2D;&#x52A0;&#x5165;</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pandoc:</span><br><span class="line">  mathEngine: katex</span><br></pre></td></tr></table></figure>
-<p>&#x53C2;&#x8003;<a href="https://blog.masellum.me/2018/10/Hexo-Math-Katex/" target="_blank" rel="noopener">&#x300A;&#x4E3A; Hexo &#x66F4;&#x6362;&#x6570;&#x5B66;&#x6E32;&#x67D3;&#x5F15;&#x64CE;&#x4E3A; KaTeX&#x300B;</a></p>
+<p>&#x53C2;&#x8003;<a target="_blank" rel="noopener" href="https://blog.masellum.me/2018/10/Hexo-Math-Katex/">&#x300A;&#x4E3A; Hexo &#x66F4;&#x6362;&#x6570;&#x5B66;&#x6E32;&#x67D3;&#x5F15;&#x64CE;&#x4E3A; KaTeX&#x300B;</a></p>
 <h2 id="&#x7528;hexo-abbrlink&#x4E3A;&#x535A;&#x6587;&#x7ED1;&#x5B9A;disqushexo&#x4E3B;&#x9898;-journal">&#x7528;hexo-abbrlink&#x4E3A;&#x535A;&#x6587;&#x7ED1;&#x5B9A;Disqus&#xFF08;Hexo&#x4E3B;&#x9898; Journal&#xFF09;</h2>
-<p>&#x5148;&#x5B89;&#x88C5;<a href="https://github.com/rozbo/hexo-abbrlink" target="_blank" rel="noopener">hexo-abbrlink</a>.</p>
+<p>&#x5148;&#x5B89;&#x88C5;<a target="_blank" rel="noopener" href="https://github.com/rozbo/hexo-abbrlink">hexo-abbrlink</a>.</p>
 <p>&#x7136;&#x540E;&#x5C06;<code>\themes\journal\layout\_include\comment_includes.ejs</code>&#x8FDB;&#x884C;&#x4FEE;&#x6539;</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var disqus_config = function () {</span><br><span class="line">        this.page.url = &apos;&lt;%= config.url + config.root + page.path %&gt;&apos;;</span><br><span class="line">        this.page.identifier = &apos;&lt;%= page.abbrlink %&gt;&apos;; </span><br><span class="line">        //&apos;&lt;%= config.root + page.path %&gt;&apos;;</span><br><span class="line">};</span><br></pre></td></tr></table></figure>
 
