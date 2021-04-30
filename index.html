@@ -67,6 +67,120 @@
 
   
     
+    <h3 class="article-title"><a href="/post/2021/04/webpack-备忘.html"><span>webpack 备忘</span></a></h3>
+    
+  
+
+  <div class="article-top-meta">
+    <span class="posted-on">
+      <a href="/post/2021/04/webpack-备忘.html" rel="bookmark">
+        <time class="entry-date published" datetime="2021-04-30T03:19:44.000Z">
+          2021-04-30
+        </time>
+      </a>
+    </span>
+  </div>
+
+
+  
+
+  <div class="article-content">
+    <div class="entry">
+      
+        <h2 id="&#x914D;&#x7F6E;">&#x914D;&#x7F6E;</h2>
+<h3 id="entry">entry</h3>
+<p>&#x5165;&#x53E3;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x662F; <code>./src/index.js</code></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">entry: <span class="string">&apos;./path/to/my/entry/file.js&apos;</span>,</span><br></pre></td></tr></table></figure>
+<h3 id="output">output</h3>
+<p>&#x8F93;&#x51FA;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x662F; <code>./dist/main.js</code>&#xFF0C;&#x5176;&#x4ED6;&#x751F;&#x6210;&#x6587;&#x4EF6;&#x9ED8;&#x8BA4;&#x653E;&#x7F6E;&#x5728; <code>./dist</code> &#x6587;&#x4EF6;&#x5939;&#x4E2D;&#x3002;</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">output: {</span><br><span class="line">    path: path.resolve(__dirname, <span class="string">&apos;dist&apos;</span>),</span><br><span class="line">    filename: <span class="string">&apos;my-first-webpack.bundle.js&apos;</span>,</span><br><span class="line">},</span><br></pre></td></tr></table></figure>
+<h3 id="loader">loader</h3>
+<p>webpack &#x53EA;&#x80FD;&#x7406;&#x89E3; JavaScript &#x548C; JSON &#x6587;&#x4EF6;</p>
+<p>loader &#x8BA9; webpack &#x80FD;&#x591F;&#x53BB;&#x5904;&#x7406;&#x5176;&#x4ED6;&#x7C7B;&#x578B;&#x7684;&#x6587;&#x4EF6;</p>
+<p>&#x5728;&#x66F4;&#x9AD8;&#x5C42;&#x9762;&#xFF0C;&#x5728; webpack &#x7684;&#x914D;&#x7F6E;&#x4E2D;&#xFF0C;<strong>loader</strong> &#x6709;&#x4E24;&#x4E2A;&#x5C5E;&#x6027;&#xFF1A;</p>
+<ol type="1">
+<li><code>test</code> &#x5C5E;&#x6027;&#xFF0C;&#x8BC6;&#x522B;&#x51FA;&#x54EA;&#x4E9B;&#x6587;&#x4EF6;&#x4F1A;&#x88AB;&#x8F6C;&#x6362;&#x3002;</li>
+<li><code>use</code> &#x5C5E;&#x6027;&#xFF0C;&#x5B9A;&#x4E49;&#x51FA;&#x5728;&#x8FDB;&#x884C;&#x8F6C;&#x6362;&#x65F6;&#xFF0C;&#x5E94;&#x8BE5;&#x4F7F;&#x7528;&#x54EA;&#x4E2A; loader&#x3002;</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">module</span>: {</span><br><span class="line">    rules: [{ <span class="attr">test</span>: <span class="regexp">/\.txt$/</span>, use: <span class="string">&apos;raw-loader&apos;</span> }],</span><br><span class="line">},</span><br></pre></td></tr></table></figure>
+<h3 id="plugin">plugin</h3>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">plugins: [<span class="keyword">new</span> XXXPlugin()]</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+  </div>
+
+  <div class="article-footer">
+    <div class="article-meta pull-left">
+
+    
+
+    
+
+    </div>
+
+    
+  </div>
+</article>
+
+
+
+  <article>
+
+  
+    
+    <h3 class="article-title"><a href="/post/2021/04/一些JS函数.html"><span>一些JS函数</span></a></h3>
+    
+  
+
+  <div class="article-top-meta">
+    <span class="posted-on">
+      <a href="/post/2021/04/一些JS函数.html" rel="bookmark">
+        <time class="entry-date published" datetime="2021-04-30T03:18:58.000Z">
+          2021-04-30
+        </time>
+      </a>
+    </span>
+  </div>
+
+
+  
+
+  <div class="article-content">
+    <div class="entry">
+      
+        <h2 id="buildarray">buildArray</h2>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * &#x901A;&#x8FC7; `size` &#x548C; `init` &#x51FD;&#x6570;&#x6765;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;</span></span><br><span class="line"><span class="comment"> * </span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param </span>size &#x6570;&#x7EC4;&#x7684;&#x5927;&#x5C0F;</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param </span>init &#x521D;&#x59CB;&#x5316;&#x51FD;&#x6570;&#xFF1A;(index) =&gt; element</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@returns <span class="type">{*[]}</span></span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">const</span> buildArray = <span class="function">(<span class="params">size, init</span>) =&gt;</span></span><br><span class="line">  <span class="built_in">Array</span>(size).fill(<span class="literal">null</span>).map(<span class="function">(<span class="params">_, i</span>) =&gt;</span> init(i));</span><br></pre></td></tr></table></figure>
+<h2 id="setdefaultargs">setDefaultArgs</h2>
+<p>&#x4E3A;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x52A8;&#x6001;&#x5730;&#x8BBE;&#x7F6E;&#x53C2;&#x6570;&#x7684;&#x9ED8;&#x8BA4;&#x503C;&#x3002;</p>
+<p>&#x652F;&#x6301;&#x590D;&#x6742;&#x5BF9;&#x8C61;&#xFF0C;&#x652F;&#x6301;&#x94FE;&#x5F0F;&#x8C03;&#x7528;&#xFF0C;&#x652F;&#x6301;&#x7ED1;&#x5B9A;</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * &#x4E3A;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x52A8;&#x6001;&#x5730;&#x8BBE;&#x7F6E;&#x53C2;&#x6570;&#x7684;&#x9ED8;&#x8BA4;&#x503C;&#x3002;</span></span><br><span class="line"><span class="comment"> * &#x652F;&#x6301;&#x590D;&#x6742;&#x5BF9;&#x8C61;&#xFF0C;&#x652F;&#x6301;&#x94FE;&#x5F0F;&#x8C03;&#x7528;&#xFF0C;&#x652F;&#x6301;&#x7ED1;&#x5B9A;</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * &#x5176;&#x4E2D;&#x7684; `getParameterNames` &#x51FD;&#x6570;</span></span><br><span class="line"><span class="comment"> * &#x6765;&#x81EA;&#x4E8E; https://www.npmjs.com/package/get-parameter-names</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param </span>fn &#x9700;&#x8981;&#x8BBE;&#x7F6E;&#x9ED8;&#x8BA4;&#x503C;&#x7684;&#x51FD;&#x6570;</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param </span>defaultArgs &#x683C;&#x5F0F;&#xFF1A;{ &#x53C2;&#x6570;&#x540D; &#x6216;&#x8005; &#x53C2;&#x6570;&#x4F4D;&#x7F6E;&#x7684;&#x4E0B;&#x6807;: &#x9ED8;&#x8BA4;&#x503C;&#xFF0C;... } &#x6216;&#x8005;&#x4F7F;&#x7528;&#x6570;&#x7EC4;</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@returns <span class="type">{ Function }</span></span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">setDefaultArgs</span> (<span class="params">fn, defaultArgs</span>) </span>{</span><br><span class="line">  <span class="comment">// See: https://www.npmjs.com/package/get-parameter-names</span></span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">getParameterNames</span> (<span class="params">fn</span>) </span>{</span><br><span class="line">    <span class="keyword">const</span> COMMENTS = <span class="regexp">/((\/\/.*$)|(\/\*[\s\S]*?\*\/))/mg</span>;</span><br><span class="line">    <span class="keyword">const</span> FAT_ARROWS = <span class="regexp">/=&gt;.*$/mg</span>;</span><br><span class="line">    <span class="keyword">const</span> DEFAULT_PARAMS = <span class="regexp">/=[^,]+/mg</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">const</span> code = fn.toString()</span><br><span class="line">      .replace(COMMENTS, <span class="string">&apos;&apos;</span>)</span><br><span class="line">      .replace(FAT_ARROWS, <span class="string">&apos;&apos;</span>)</span><br><span class="line">      .replace(DEFAULT_PARAMS, <span class="string">&apos;&apos;</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">const</span> result = code.slice(code.indexOf(<span class="string">&apos;(&apos;</span>) + <span class="number">1</span>, code.indexOf(<span class="string">&apos;)&apos;</span>))</span><br><span class="line">      .match(<span class="regexp">/([^\s,]+)/g</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> result || [];</span><br><span class="line">  }</span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> names = getParameterNames(fn);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> functionTemplate = <span class="function">(<span class="params">fn, names, defaultArgs</span>) =&gt;</span></span><br><span class="line">    <span class="function"><span class="keyword">function</span> (<span class="params">$PARAMS$</span>) </span>{</span><br><span class="line">      <span class="keyword">const</span> fixedArgs = <span class="built_in">Array</span>(names.length).fill(<span class="string">&apos;_&apos;</span>).map(<span class="function">(<span class="params">_, i</span>) =&gt;</span></span><br><span class="line">        <span class="built_in">arguments</span>[i] || defaultArgs[names[i]] || defaultArgs[i]);</span><br><span class="line">      <span class="keyword">return</span> fn.apply(<span class="built_in">this</span>, fixedArgs);</span><br><span class="line">    };</span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> template = <span class="string">`&quot;use strict&quot;; return <span class="subst">${functionTemplate}</span>`</span></span><br><span class="line">    .replace(<span class="string">&apos;$PARAMS$&apos;</span>, names.join(<span class="string">&apos;, &apos;</span>))</span><br><span class="line">    .replace(<span class="regexp">/^ {4}/gm</span>, <span class="string">&apos;&apos;</span>);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">Function</span>(template)()(fn, names, defaultArgs);</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * &#x57FA;&#x4E8E;&#x539F;&#x578B;&#x94FE;&#x8FDB;&#x884C;&#x8C03;&#x7528;&#x7684;&#x7248;&#x672C;&#x3001;</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@see <span class="variable">setDefaultArgs</span></span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param <span class="variable">defaultArgs</span></span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@returns <span class="type">{*}</span></span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="built_in">Function</span>.prototype.setDefaultArgs = <span class="function"><span class="keyword">function</span> (<span class="params">defaultArgs</span>) </span>{</span><br><span class="line">  <span class="keyword">return</span> setDefaultArgs(<span class="built_in">this</span>, defaultArgs);</span><br><span class="line">};</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+  </div>
+
+  <div class="article-footer">
+    <div class="article-meta pull-left">
+
+    
+
+    
+
+    </div>
+
+    
+  </div>
+</article>
+
+
+
+  <article>
+
+  
+    
     <h3 class="article-title"><a href="/post/2021/03/Web-安全之-XSS-和-CSRF-备忘.html"><span>Web 安全之 XSS 和 CSRF 备忘</span></a></h3>
     
   
@@ -658,128 +772,6 @@
     <span class="post-tags">
       <i class="icon-tags"></i>
         <a href="/tags/WriteUp/">WriteUp</a><a href="/tags/CTF/">CTF</a>
-    </span>
-    
-
-    </div>
-
-    
-  </div>
-</article>
-
-
-
-  <article>
-
-  
-    
-    <h3 class="article-title"><a href="/post/2018/12/Note-2.html"><span>随记·回顾</span></a></h3>
-    
-  
-
-  <div class="article-top-meta">
-    <span class="posted-on">
-      <a href="/post/2018/12/Note-2.html" rel="bookmark">
-        <time class="entry-date published" datetime="2018-12-30T03:48:40.000Z">
-          2018-12-30
-        </time>
-      </a>
-    </span>
-  </div>
-
-
-  
-
-  <div class="article-content">
-    <div class="entry">
-      
-        <p>又是许久未写博文了。</p>
-        
-          <p><a class="excerpt-btn" href="post/2018/12/Note-2.html"><span>...More</span></a></p>
-        
-      
-    </div>
-
-  </div>
-
-  <div class="article-footer">
-    <div class="article-meta pull-left">
-
-    
-      
-
-    <span class="post-categories">
-      <i class="icon-categories"></i>
-        <a href="/categories/随记/">随记</a>
-    </span>
-    
-
-    
-
-    </div>
-
-    
-  </div>
-</article>
-
-
-
-  <article>
-
-  
-    
-    <h3 class="article-title"><a href="/post/2018/08/Note-of-Deep-Leaning.html"><span>神经网络和深度学习笔记</span></a></h3>
-    
-  
-
-  <div class="article-top-meta">
-    <span class="posted-on">
-      <a href="/post/2018/08/Note-of-Deep-Leaning.html" rel="bookmark">
-        <time class="entry-date published" datetime="2018-08-20T14:03:08.000Z">
-          2018-08-20
-        </time>
-      </a>
-    </span>
-  </div>
-
-
-  
-
-  <div class="article-content">
-    <div class="entry">
-      
-        <h2 id="前言">前言</h2>
-<p>这篇博文也算不上什么入门教程，单纯只是记录一下看了<a target="_blank" rel="noopener" href="http://www.3blue1brown.com/">3blue1brown</a>的深度学习后的认识和想法。</p>
-<h2 id="对神经网络的感觉">对神经网络的感觉</h2>
-<p>我觉得这像是形异但神似的仿生学。</p>
-<p>从数不尽的神经元以及神奇而又错综复杂的神经连结的底层，到会哭会笑的自我感知以及充满无穷无尽的创意智慧的顶层，人类对于自己的大脑如何从神经到产生自我意识以及智慧的认识，依然有着断层。尽管对于大脑的研究不断深入，但是这一步，却是始终无法踏出。</p>
-<p>所以不再去考虑外形，而是利用强大的算力模拟神经的连结和运转，来期望能够产生智能。</p>
-        
-          <p><a class="excerpt-btn" href="post/2018/08/Note-of-Deep-Leaning.html"><span>...More</span></a></p>
-        
-      
-    </div>
-
-  </div>
-
-  <div class="article-footer">
-    <div class="article-meta pull-left">
-
-    
-      
-
-    <span class="post-categories">
-      <i class="icon-categories"></i>
-        <a href="/categories/知识/">知识</a>, <a href="/categories/知识/CS/">CS</a>, <a href="/categories/知识/CS/AI/">AI</a>
-    </span>
-    
-
-    
-    
-
-    <span class="post-tags">
-      <i class="icon-tags"></i>
-        <a href="/tags/神经网络/">神经网络</a><a href="/tags/深度学习/">深度学习</a>
     </span>
     
 
