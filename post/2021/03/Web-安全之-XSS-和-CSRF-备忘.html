@@ -11,10 +11,19 @@
 
   
   <meta name="description" content="XSS
-&amp;#x8DE8;&amp;#x7AD9;&amp;#x811A;&amp;#x672C;&amp;#x653B;&amp;#x51FB;&amp;#xFF08;Cross Site Scripting&amp;#xFF09;
-&amp;#x653B;&amp;#x51FB;&amp;#x65B9;&amp;#x5F0F;
+跨站脚本攻击（Cross Site Scripting）
+攻击方式
 
-&amp;#x901A;&amp;#x8FC7;input&amp;#x548">
+通过input和textarea注入
+嵌入 JS 脚本
+img 的 onerror
+直接使用 URL 参数
+
+防御方式
+
+输入验证、过滤
+Content-Type
+Session、验证码">
   
 
   
@@ -110,6 +119,7 @@
 <li>Content-Type</li>
 <li>Session&#x3001;&#x9A8C;&#x8BC1;&#x7801;</li>
 </ol>
+<span id="more"></span>
 <h2 id="csrf">CSRF</h2>
 <p><a target="_blank" rel="noopener" href="https://juejin.im/post/59e6b21bf265da43247f861d">&#x8DE8;&#x7AD9;&#x8BF7;&#x6C42;&#x4F2A;&#x9020;</a> <code>CSRF</code>&#xFF08;Cross-site request forgery&#xFF09;</p>
 <h3 id="&#x653B;&#x51FB;&#x65B9;&#x5F0F;-1">&#x653B;&#x51FB;&#x65B9;&#x5F0F;</h3>

@@ -10,12 +10,13 @@
   
 
   
-  <meta name="description" content="&amp;#x914D;&amp;#x7F6E;
+  <meta name="description" content="配置
 entry
-&amp;#x5165;&amp;#x53E3;&amp;#xFF0C;&amp;#x9ED8;&amp;#x8BA4;&amp;#x503C;&amp;#x662F; ./src/index.js
-1entry: &amp;apos;./path/to/my/entry/file.js&amp;apos;,
+入口，默认值是 ./src/index.js
+1entry: &amp;#x27;./path/to/my/entry/file.js&amp;#x27;,
 output
-">
+输出，默认值是 ./dist/main.js，其他生成文件默认放置在 ./dist 文件夹中。
+1234output: &amp;#123;    path: path.resolve(__dirname, &amp;#x27;dist&amp;#x27;),    filename: &amp;#x27;my-first-webpack.bundle.js&amp;#x27;,&amp;#125;,">
   
 
   
@@ -103,6 +104,7 @@ output
 <h3 id="output">output</h3>
 <p>&#x8F93;&#x51FA;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x662F; <code>./dist/main.js</code>&#xFF0C;&#x5176;&#x4ED6;&#x751F;&#x6210;&#x6587;&#x4EF6;&#x9ED8;&#x8BA4;&#x653E;&#x7F6E;&#x5728; <code>./dist</code> &#x6587;&#x4EF6;&#x5939;&#x4E2D;&#x3002;</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">output: {</span><br><span class="line">    path: path.resolve(__dirname, <span class="string">&apos;dist&apos;</span>),</span><br><span class="line">    filename: <span class="string">&apos;my-first-webpack.bundle.js&apos;</span>,</span><br><span class="line">},</span><br></pre></td></tr></table></figure>
+<span id="more"></span>
 <h3 id="loader">loader</h3>
 <p>webpack &#x53EA;&#x80FD;&#x7406;&#x89E3; JavaScript &#x548C; JSON &#x6587;&#x4EF6;</p>
 <p>loader &#x8BA9; webpack &#x80FD;&#x591F;&#x53BB;&#x5904;&#x7406;&#x5176;&#x4ED6;&#x7C7B;&#x578B;&#x7684;&#x6587;&#x4EF6;</p>
